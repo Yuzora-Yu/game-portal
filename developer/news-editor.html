@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#201d17">
+  <title>お知らせ投稿エディタ | YUZORA GAME ARCHIVE</title>
+  <link rel="icon" href="../assets/prisma-abyss-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="editor-body">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="site-header__inner"><a class="brand" href="../"><span class="brand__mark" aria-hidden="true">◆</span><span><strong>YUZORA GAME ARCHIVE</strong><small>DEVELOPER TOOL</small></span></a><nav class="global-nav" aria-label="エディタナビゲーション"><a href="../news.html">NEWS</a><a href="../developer.html">PROFILE</a><a href="../">PORTAL</a></nav></div></header>
+  <main id="main" class="editor-page">
+    <header class="page-masthead"><p class="eyebrow">LOCAL AUTHORING TOOL / NO AUTO PUBLISH</p><h1>お知らせ投稿エディタ</h1><p>詳細HTMLと更新済み <code>news-data.js</code> を生成します。生成物をリポジトリへ配置・コミットすると公開されます。</p></header>
+    <div class="editor-warning"><strong>公開ページに置く場合の注意</strong><p>このツールには認証機能がありません。直接リポジトリへ書き込む機能もありません。必要に応じてCloudflare Access等で保護するか、ローカルだけで使用してください。</p></div>
+    <div class="editor-grid">
+      <form class="editor-form" id="news-editor-form">
+        <div class="form-row"><label>公開日<input type="date" name="date" required></label><label>カテゴリ<input type="text" name="category" value="PORTAL UPDATE" maxlength="40" required></label></div>
+        <label>タイトル<input type="text" name="title" maxlength="90" required placeholder="アップデート内容を公開しました"></label>
+        <label>記事ID / ファイル名<input type="text" name="id" pattern="[a-z0-9-]+" required placeholder="2026-07-24-update-note"><small>半角英小文字・数字・ハイフンのみ。拡張子は不要です。</small></label>
+        <label>一覧用概要<textarea name="summary" rows="3" maxlength="180" required placeholder="一覧とmeta descriptionに表示する短い説明"></textarea></label>
+        <label>本文<textarea name="body" rows="14" required placeholder="段落ごとに空行を入れてください。\n\n見出しは行頭に ## を付けます。"></textarea></label>
+        <div class="editor-actions"><button class="button button--primary" type="button" id="download-html">詳細HTMLをダウンロード</button><button class="button" type="button" id="download-data">更新済みデータをダウンロード</button><button class="button button--quiet" type="button" id="copy-entry">データ1件をコピー</button></div>
+        <p class="editor-status" id="editor-status" role="status" aria-live="polite"></p>
+      </form>
+      <section class="editor-preview" aria-labelledby="preview-title"><p class="stamp">LIVE PREVIEW</p><h2 id="preview-title">記事プレビュー</h2><article class="news-article news-article--preview" id="editor-preview"></article></section>
+    </div>
+    <section class="editor-steps"><h2>公開手順</h2><ol><li>「詳細HTML」を <code>news/</code> フォルダへ配置</li><li>「更新済みデータ」で <code>scripts/news-data.js</code> を置換</li><li>ローカルサーバーでトップ・一覧・詳細のリンクを確認</li><li>Gitへコミットして公開</li></ol></section>
+  </main>
+  <footer class="site-footer"><div class="site-footer__inner"><p><strong>YUZORA GAME ARCHIVE</strong><br><small>AUTHORING TOOL</small></p><nav class="footer-policy-nav" aria-label="サイトポリシー"><a href="../privacy.html">プライバシー</a><a href="../terms.html">利用規約</a><a href="../disclaimer.html">免責事項</a></nav><p>LOCAL USE RECOMMENDED</p></div></footer>
+  <script src="../scripts/news-data.js"></script><script src="./news-editor.js" defer></script>
+</body>
+</html>

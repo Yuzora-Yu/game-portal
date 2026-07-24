@@ -6,34 +6,22 @@
   <meta name="description" content="Yuzora-Yuが制作した、ブラウザですぐ遊べる自作ゲームのポータルサイトです。">
   <meta name="theme-color" content="#201d17">
   <title>YUZORA GAME ARCHIVE</title>
-
   <link rel="icon" href="./assets/prisma-abyss-icon.png">
   <link rel="stylesheet" href="./styles.css">
-
-  <!-- AdSense審査・承認後に、AdSense管理画面で発行されたコードをここへ設置します。 -->
-  <!--
-  <script async
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-    crossorigin="anonymous"></script>
-  -->
+  <!-- AdSense審査・承認後に、管理画面で発行された共通コードをここへ設置します。 -->
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
-
   <header class="site-header">
     <div class="site-header__inner">
       <a class="brand" href="./" aria-label="YUZORA GAME ARCHIVE トップ">
         <span class="brand__mark" aria-hidden="true">◆</span>
-        <span>
-          <strong>YUZORA GAME ARCHIVE</strong>
-          <small>個人制作ブラウザゲーム保管庫</small>
-        </span>
+        <span><strong>YUZORA GAME ARCHIVE</strong><small>個人制作ブラウザゲーム保管庫</small></span>
       </a>
-
       <nav class="global-nav" aria-label="主要ナビゲーション">
         <a href="#games">GAMES</a>
-        <a href="#news">LOG</a>
-        <a href="#about">ABOUT</a>
+        <a href="./news.html">NEWS</a>
+        <a href="./developer.html">DEVELOPER</a>
         <a href="./privacy.html">PRIVACY</a>
       </nav>
     </div>
@@ -44,14 +32,9 @@
       <div class="hero__copy">
         <p class="eyebrow">WEB GAME PORTAL</p>
         <h1 id="hero-title">自作ゲームを<br>電子の片隅に。</h1>
-        <p class="hero__lead">
-          インストール不要。<br>
-		  気になった作品を開いて、そのまま遊べます。<br>
-          開発中の試作も含め、少しずつ追加していきます。
-        </p>
+        <p class="hero__lead">インストール不要。<br>気になった作品を開いて、そのまま遊べます。<br>開発中の試作も含め、少しずつ追加していきます。</p>
         <a class="button button--primary" href="#games">ゲームを見る <span aria-hidden="true">→</span></a>
       </div>
-
       <aside class="hero__note" aria-label="サイト案内">
         <p class="stamp">FREE TO PLAY</p>
         <dl class="spec-list">
@@ -71,110 +54,56 @@
       </div>
 
       <article class="game-entry">
-        <div class="game-entry__visual">
+        <a class="game-entry__visual" href="./game-prisma-abyss.html" aria-label="PRISMA ABYSS 詳細ページ">
           <p class="game-entry__number">GAME 01</p>
-          <img
-            class="game-entry__logo"
-            src="./assets/prisma-abyss-logo.png"
-            alt="PRISMA ABYSS"
-            width="1696"
-            height="848"
-            loading="eager">
-        </div>
-
+          <img class="game-entry__logo" src="./assets/prisma-abyss-logo.png" alt="PRISMA ABYSS" width="1774" height="887" loading="eager">
+          <span class="cover-link-label">DETAIL FILE →</span>
+        </a>
         <div class="game-entry__body">
           <div class="game-entry__title-row">
-            <div>
-              <p class="eyebrow">HACK &amp; SLASH RPG</p>
-              <h3>PRISMA ABYSS</h3>
-            </div>
+            <div><p class="eyebrow">HACK &amp; SLASH RPG</p><h3>PRISMA ABYSS</h3></div>
             <img class="game-entry__icon" src="./assets/prisma-abyss-icon.png" alt="" width="192" height="192">
           </div>
-
-          <p class="game-entry__summary">
-            スマートフォン向けに制作中のハック＆スラッシュRPG。
-            ダンジョン探索、装備収集、仲間編成などをブラウザ上で楽しめます。
-          </p>
-
+          <p class="game-entry__summary">スマートフォン向けに制作中のハック＆スラッシュRPG。ダンジョン探索、装備収集、仲間編成などをブラウザ上で楽しめます。</p>
           <ul class="tag-list" aria-label="ゲームの特徴">
-            <li>開発中</li>
-            <li>無料（一部広告あり）</li>
-            <li>ローカルセーブ（エクスポート対応）</li>
-            <li>スマホ対応</li>
+            <li>開発中</li><li>無料（一部広告あり）</li><li>ローカルセーブ</li><li>スマホ対応</li>
           </ul>
-
           <div class="game-entry__actions">
-            <!-- 本番では、Cloudflare Pages等にデプロイしたゲームURLへ変更してください。 -->
             <a class="button button--primary" href="https://yuzora-yu.github.io/RPG-TEST/">PLAY GAME</a>
-            <!-- <a class="button" href="https://github.com/Yuzora-Yu/RPG-TEST/">SOURCE / DEV LOG</a> -->
+            <a class="button" href="./game-prisma-abyss.html">作品詳細</a>
           </div>
-
-          <p class="game-entry__caution">
-            開発版のため、予告なく仕様変更やセーブデータの互換性変更を行う場合があります。
-          </p>
+          <p class="game-entry__caution">開発版のため、予告なく仕様変更やセーブデータの互換性変更を行う場合があります。</p>
         </div>
       </article>
 
-      <p></p>
-
-      <div class="next-file" aria-label="次回作について">
-        <span>NEXT FILE</span>
-        <p>次のゲームは、できたところから追加します。</p>
-      </div>
+      <div class="next-file" aria-label="次回作について"><span>NEXT FILE</span><p>次のゲームは、できたところから追加します。</p></div>
     </section>
 
     <aside class="ad-area" aria-label="広告">
       <p class="ad-area__label">広告</p>
-      <div class="ad-area__placeholder">
-        <span>ADVERTISEMENT SPACE</span>
-      </div>
-
-      <!-- AdSense承認後の広告ユニット例。ゲーム操作ボタンから十分に離して設置します。 -->
-      <!--
-      <ins class="adsbygoogle"
-        style="display:block"
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-        data-ad-slot="XXXXXXXXXX"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      -->
+      <div class="ad-area__placeholder"><span>ADVERTISEMENT SPACE</span><small>ゲーム操作と誤認しない独立領域</small></div>
+      <!-- AdSense承認後の広告ユニットはここへ。ゲーム操作ボタンから十分に離して設置します。 -->
     </aside>
 
     <section class="section section--split" id="news" aria-labelledby="news-title">
       <div>
-        <div class="section-heading section-heading--compact">
-          <p>DEVELOPMENT LOG</p>
-          <h2 id="news-title">更新記録</h2>
-        </div>
-        <ol class="log-list">
-          <li>
-            <time datetime="2026-07-24">2026.07.24</time>
-            <span>ポータルサイト試作版を作成</span>
-          </li>
+        <div class="section-heading section-heading--compact"><p>DEVELOPMENT LOG</p><h2 id="news-title">お知らせ</h2></div>
+        <ol class="log-list" id="news-list" data-limit="5">
+          <li class="news-loading">お知らせを読み込んでいます。</li>
         </ol>
+        <a class="text-arrow" href="./news.html">すべてのお知らせを見る →</a>
       </div>
-
-      <div id="about" class="about-box">
+      <div class="about-box">
         <p class="eyebrow">ABOUT THIS ARCHIVE</p>
         <h2>このサイトについて</h2>
-        <p>
-          個人で制作しているブラウザゲームをまとめるためのポータルサイトです。
-          作品は開発中のものを含みます。感想や不具合報告は、各作品の案内または問い合わせ先からお送りください。
-        </p>
-        <div class="text-links">
-          <a href="./privacy.html">プライバシーポリシー</a>
-          <a href="mailto:YOUR-EMAIL@example.com">お問い合わせ</a>
-        </div>
+        <p>個人で制作しているブラウザゲームをまとめるポータルサイトです。作品は開発中のものを含みます。感想や不具合報告は、各作品の案内または問い合わせ先からお送りください。</p>
+        <div class="text-links"><a href="./developer.html">開発者情報</a><a href="./privacy.html">プライバシーポリシー</a><a href="./terms.html">利用規約</a><a href="./disclaimer.html">免責事項</a><a href="./developer.html#social-title">お問い合わせ・不具合報告</a></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="site-footer__inner">
-      <p><strong>YUZORA GAME ARCHIVE</strong><br><small>HANDMADE BROWSER GAMES</small></p>
-      <p>© 2026 Yuzora-Yu</p>
-    </div>
-  </footer>
+  <footer class="site-footer"><div class="site-footer__inner"><p><strong>YUZORA GAME ARCHIVE</strong><br><small>HANDMADE BROWSER GAMES</small></p><nav class="footer-policy-nav" aria-label="サイトポリシー"><a href="./privacy.html">プライバシー</a><a href="./terms.html">利用規約</a><a href="./disclaimer.html">免責事項</a></nav><p>© 2026 Yuzora-Yu</p></div></footer>
+  <script src="./scripts/news-data.js"></script>
+  <script src="./scripts/news-render.js" defer></script>
 </body>
 </html>
