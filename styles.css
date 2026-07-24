@@ -19,7 +19,8 @@
   --space-5: 3.5rem;
   --space-6: 5.5rem;
   --content: 72rem;
-  --header-offset: 1rem;
+  --header-height: 84px;
+  --header-offset: calc(var(--header-height) + 1rem);
 }
 
 * { box-sizing: border-box; }
@@ -32,13 +33,13 @@ a:hover { color: var(--accent); }
 button, input, textarea { font: inherit; }
 button { color: inherit; }
 :focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
-[id] { scroll-margin-top: var(--header-offset); }
+[id] { scroll-margin-top: 0; }
 code { padding: .12em .3em; background: rgba(32,29,23,.1); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .92em; }
 
 .skip-link { position: fixed; left: 1rem; top: -6rem; z-index: 1000; padding: .7rem 1rem; background: var(--ink); color: var(--paper-light); }
 .skip-link:focus { top: 1rem; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-.site-header { border-bottom: 2px solid var(--rule); background: var(--paper-light); }
+.site-header { position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--rule); background: var(--paper-light); }
 .site-header__inner { width: min(calc(100% - 2rem), var(--content)); min-height: 84px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
 .brand { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; line-height: 1.15; }
 .brand:hover { color: var(--ink); }
@@ -77,6 +78,7 @@ dd { margin: 0; font-size: .88rem; font-weight: 700; }
 .button--quiet { box-shadow: none; border-style: dashed; }
 
 .section { padding-block: var(--space-6); }
+#games { padding-top: clamp(1.75rem, 3.5vw, 2.75rem); }
 .section-heading { display: grid; grid-template-columns: 12rem 1fr; align-items: end; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 3px solid var(--rule); }
 .section-heading p { margin: 0; color: var(--accent); font-family: var(--font-display); font-size: .75rem; font-weight: 900; letter-spacing: .14em; }
 .section-heading h2 { margin: 0; }
@@ -230,7 +232,7 @@ dd { margin: 0; font-size: .88rem; font-weight: 700; }
 .editor-steps { margin-top: 2rem; padding: 1.5rem; border: 2px dashed var(--rule); }
 
 @media (max-width: 850px) {
-  :root { --header-offset: 1rem; }
+  :root { --header-height: 8.75rem; --header-offset: calc(var(--header-height) + .75rem); }
   .site-header__inner { padding-block: .75rem; align-items: flex-start; flex-direction: column; }
   .global-nav { width: 100%; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; }
   .global-nav a { border-left: 0; border-right: 0; }
