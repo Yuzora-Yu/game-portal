@@ -62,10 +62,10 @@ python -m http.server 8000
 
 ## 画像素材
 
-ゲーム詳細ページでは、ゲーム内素材をポータル用に複製・WebP化して使用しています。漢字 de クラッシュキーボードの紹介文はGitHubリポジトリのv0.2.2（commit `91cbe06`）を確認して更新しています。掲載画面はv0.2.0配布ZIPをローカル実行して撮影したもので、v0.2.2では語彙と採点ルールが更新されています。
+ゲーム詳細ページでは、ゲーム内素材をポータル用に複製・WebP化して使用しています。漢字 de クラッシュキーボードは、10語モードとCPU戦を追加した最新開発版の仕様・提供画面に合わせて紹介内容を更新しています。
 
 - 横長背景: `assets/prisma-medal-hall.webp`
-- 漢字 de クラッシュキーボード: `assets/kanji-crash-start.webp`、`assets/kanji-crash-play.webp`、`assets/kanji-crash-highscore.webp`、`assets/kanji-crash-icon.svg`（配布ZIP内アイコンをそのまま使用）
+- 漢字 de クラッシュキーボード: `assets/kanji-crash-start.webp`、`assets/kanji-crash-play.webp`、`assets/kanji-crash-cpu.webp`、`assets/kanji-crash-icon.svg`（配布ZIP内アイコンをそのまま使用）
 - キャラクター: ジョセフ、エリーゼ、リーシア
 - モンスター: かえんりゅう、アクアリリィ、ブリーズリザード
 
