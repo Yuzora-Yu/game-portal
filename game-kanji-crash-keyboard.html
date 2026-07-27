@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="漢字の読みと壊れゆくキーボードを組み合わせたサバイバルタイピング『漢字 de クラッシュキーボード』の作品紹介・遊び方・開発状況。">
+  <meta name="theme-color" content="#201d17">
+  <title>漢字 de クラッシュキーボード | YUZORA GAME ARCHIVE</title>
+  <link rel="icon" href="./assets/kanji-crash-icon.webp">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header"><div class="site-header__inner">
+    <a class="brand" href="./"><span class="brand__mark" aria-hidden="true">◆</span><span><strong>YUZORA GAME ARCHIVE</strong><small>個人制作ブラウザゲーム保管庫</small></span></a>
+    <nav class="global-nav" aria-label="主要ナビゲーション"><a href="./#games" aria-current="page">GAMES</a><a href="./news.html">NEWS</a><a href="./developer.html">DEVELOPER</a><a href="./privacy.html">PRIVACY</a></nav>
+  </div></header>
+
+  <main id="main">
+    <article class="detail-page">
+      <header class="game-detail-hero game-detail-hero--kanji">
+        <img class="game-detail-hero__image" src="./assets/kanji-crash-start.webp" alt="漢字 de クラッシュキーボードのタイトル画面。モードと難易度を選択してゲームを開始する画面" width="1265" height="786">
+        <div class="game-detail-hero__overlay">
+          <p class="file-index">GAME FILE 02 / IN DEVELOPMENT</p>
+          <div class="game-detail-wordmark"><span>漢字 de</span><strong>クラッシュ<br>キーボード</strong><small>KANJI × KEYBOARD SURVIVAL</small></div>
+          <p>読める。でも、そのキーはもう限界。<br>漢字の読みとキーボード管理を同時に試す、PC向けサバイバルタイピング。</p>
+        </div>
+      </header>
+
+      <div class="detail-actions detail-actions--top">
+        <a class="button button--primary button--large" href="https://yuzora-yu.github.io/kanji-de-crash-keyboard/">PLAY GAME</a>
+        <a class="button button--quiet" href="#how-to">遊び方を確認</a>
+      </div>
+
+      <section class="detail-grid" aria-labelledby="overview-title">
+        <div class="prose-block">
+          <p class="eyebrow">OVERVIEW</p>
+          <h1 id="overview-title">漢字 de<br>クラッシュキーボード</h1>
+          <p class="lead-copy">画面に並ぶ3つの漢字語から、読めるものを1つ選んでローマ字入力。正解を重ねるほど使用キーが傷み、やがて入力不能になるルールが、単純な早打ちをサバイバルゲームへ変えます。</p>
+          <p>使った文字キーは判定ごとに摩耗し、同じキーを続けて使うと破損します。正解時に使わなかったキーは回復するため、読みやすさだけでなく「どの語を選べばキーボードを長持ちさせられるか」という判断も重要です。壊れた文字は Shift と反対側のキーを組み合わせて入力できます。</p>
+        </div>
+        <aside class="spec-sheet" aria-label="ゲーム仕様">
+          <p class="stamp">SPECIFICATION</p>
+          <dl>
+            <div><dt>GENRE</dt><dd>KANJI READING / SURVIVAL TYPING</dd></div>
+            <div><dt>PLATFORM</dt><dd>WEB BROWSER</dd></div>
+            <div><dt>DEVICE</dt><dd>PC / PHYSICAL KEYBOARD</dd></div>
+            <div><dt>MODE</dt><dd>30 SEC / 20 WORDS</dd></div>
+            <div><dt>LEVEL</dt><dd>5 DIFFICULTIES</dd></div>
+            <div><dt>WORDS</dt><dd>531</dd></div>
+            <div><dt>STATUS</dt><dd>IN DEVELOPMENT</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="feature-spread" aria-labelledby="features-title">
+        <div class="section-heading"><p>FEATURE REPORT</p><h2 id="features-title">ゲームの特徴</h2></div>
+        <div class="feature-grid">
+          <article class="feature-card"><span class="feature-card__number">01</span><h3>3語から選ぶ</h3><p>表示された3語のうち、読めるものならどれを選んでも正解。漢字力とキーの残り具合を見比べて入力する語を決めます。</p></article>
+          <article class="feature-card"><span class="feature-card__number">02</span><h3>キーが摩耗する</h3><p>使用したキーは正常から黄、赤へ変化し、3判定連続で使うと破損。誤答やBackspaceも無傷では済みません。</p></article>
+          <article class="feature-card"><span class="feature-card__number">03</span><h3>壊れてからが本番</h3><p>破損した文字は Shift＋反対側キーで代替入力。限られた再抽選も使い、入力経路を組み替えて続行します。</p></article>
+        </div>
+      </section>
+
+      <section class="image-report" aria-labelledby="play-screen-title">
+        <div class="image-report__heading"><p>PLAY REPORT</p><h2 id="play-screen-title">摩耗するキーボードを見ながら入力</h2></div>
+        <figure class="image-report__scene image-report__scene--screen">
+          <img src="./assets/kanji-crash-play.webp" alt="漢字 de クラッシュキーボードのプレイ画面。3つの漢字語、入力欄、残り時間、スコア、キーの状態を示すキーボードが表示されている" width="1918" height="1078" loading="lazy">
+          <figcaption>画面下のキーボードで、正常・黄・赤・破損の状態を確認できます。どの読みを選ぶかが、そのまま次の入力可能性に影響します。</figcaption>
+        </figure>
+      </section>
+
+      <aside class="ad-area" aria-label="広告"><p class="ad-area__label">広告</p><div class="ad-area__placeholder"><span>ADVERTISEMENT SPACE</span><small>ゲーム開始ボタン・操作領域とは分離</small></div></aside>
+
+      <section class="notice-panel" id="how-to" aria-labelledby="before-play-title">
+        <p class="eyebrow">BEFORE PLAY</p>
+        <h2 id="before-play-title">基本ルールとプレイ前のご案内</h2>
+        <ul class="rule-list">
+          <li><strong>3語から1語をローマ字入力。</strong><span>読みを入力して Enter で判定します。30秒でスコアを競うモードと、20語の完走時間を競うモードがあります。</span></li>
+          <li><strong>正解時は未使用キーが回復。</strong><span>使う文字が偏らない語を選ぶほど、キーボード全体を長く保ちやすくなります。</span></li>
+          <li><strong>壊れた文字は代替入力。</strong><span>Shift とキーボード反対側の対応キーを組み合わせて入力します。Shift 自身も使い続けると摩耗します。</span></li>
+          <li><strong>PC・物理キーボード推奨。</strong><span>キー配置と同時押しをゲーム性に使用します。スマートフォンより、PCブラウザでのプレイをおすすめします。</span></li>
+          <li><strong>開発中の作品です。</strong><span>語彙、難易度、バランス、画面構成などを予告なく変更する場合があります。難易度は初級・中級・上級・超級・鬼の5段階です。表記は本ゲーム独自の目安で、漢検の公式判定ではありません。</span></li>
+        </ul>
+      </section>
+
+      <div class="detail-actions"><a class="button button--primary button--large" href="https://yuzora-yu.github.io/kanji-de-crash-keyboard/">ゲームを開始する</a><a class="text-arrow" href="./">ポータルへ戻る →</a></div>
+      <p class="asset-note">掲載画像は、制作者から提供されたゲーム画面をポータル表示用に最適化して使用しています。</p>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="site-footer__inner"><p><strong>YUZORA GAME ARCHIVE</strong><br><small>GAME FILE 02</small></p><nav class="footer-policy-nav" aria-label="サイトポリシー"><a href="./privacy.html">プライバシー</a><a href="./terms.html">利用規約</a><a href="./disclaimer.html">免責事項</a></nav><p>© 2026 Yuzora-Yu</p></div></footer>
+</body>
+</html>
