@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="漢字の読みと壊れゆくキーボードを組み合わせたサバイバルタイピング『漢字 de クラッシュキーボード』の作品紹介・遊び方・開発状況。">
+  <meta name="description" content="3つの漢字語から読みとローマ字の打ち方を選び、摩耗・破損するキーを管理するサバイバルタイピング『漢字 de クラッシュキーボード v0.2.2』の紹介。1,048語、入力長ボーナス、30秒モード、5HPの20語モードに対応。">
   <meta name="theme-color" content="#201d17">
   <title>漢字 de クラッシュキーボード | YUZORA GAME ARCHIVE</title>
-  <link rel="icon" href="./assets/kanji-crash-icon.webp">
+  <link rel="icon" href="./assets/kanji-crash-icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -19,73 +19,129 @@
   <main id="main">
     <article class="detail-page">
       <header class="game-detail-hero game-detail-hero--kanji">
-        <img class="game-detail-hero__image" src="./assets/kanji-crash-start.webp" alt="漢字 de クラッシュキーボードのタイトル画面。モードと難易度を選択してゲームを開始する画面" width="1265" height="786">
+        <img class="game-detail-hero__image" src="./assets/kanji-crash-play.webp" alt="漢字 de クラッシュキーボードのプレイ画面。3つの漢字語、入力欄、キーの摩耗状態、再抽選、スコアとHPが表示されている" width="1600" height="1000">
         <div class="game-detail-hero__overlay">
-          <p class="file-index">GAME FILE 02 / IN DEVELOPMENT</p>
-          <div class="game-detail-wordmark"><span>漢字 de</span><strong>クラッシュ<br>キーボード</strong><small>KANJI × KEYBOARD SURVIVAL</small></div>
-          <p>読める。でも、そのキーはもう限界。<br>漢字の読みとキーボード管理を同時に試す、PC向けサバイバルタイピング。</p>
+          <p class="file-index">GAME FILE 02 / v0.2.2 / IN DEVELOPMENT</p>
+          <div class="game-detail-title-lockup">
+            <img class="game-detail-icon" src="./assets/kanji-crash-icon.svg" alt="" width="128" height="128">
+            <div><span>KANJI × KEYBOARD SURVIVAL</span><strong>漢字 de クラッシュキーボード</strong></div>
+          </div>
+          <p>読む。選ぶ。どの綴りで打つかまで決める。<br>漢字力とキーボード管理が交差する、PC向けサバイバルパズル。</p>
         </div>
       </header>
 
       <div class="detail-actions detail-actions--top">
         <a class="button button--primary button--large" href="https://yuzora-yu.github.io/kanji-de-crash-keyboard/">PLAY GAME</a>
-        <a class="button button--quiet" href="#how-to">遊び方を確認</a>
+        <a class="button button--quiet" href="#how-to">ルールを確認</a>
       </div>
 
       <section class="detail-grid" aria-labelledby="overview-title">
         <div class="prose-block">
           <p class="eyebrow">OVERVIEW</p>
           <h1 id="overview-title">漢字 de<br>クラッシュキーボード</h1>
-          <p class="lead-copy">画面に並ぶ3つの漢字語から、読めるものを1つ選んでローマ字入力。正解を重ねるほど使用キーが傷み、やがて入力不能になるルールが、単純な早打ちをサバイバルゲームへ変えます。</p>
-          <p>使った文字キーは判定ごとに摩耗し、同じキーを続けて使うと破損します。正解時に使わなかったキーは回復するため、読みやすさだけでなく「どの語を選べばキーボードを長持ちさせられるか」という判断も重要です。壊れた文字は Shift と反対側のキーを組み合わせて入力できます。</p>
+          <p class="lead-copy">画面に並ぶ3語のうち、読める語を答える。ただし、正解を知っているだけでは足りません。現在のキー状態で最後まで打てるか、どのローマ字表記を使うかまで考える、キーボード破損型のサバイバルタイピングです。</p>
+          <p>判定までに使った文字キーとBackspaceは、正常→黄→赤→破損の順に摩耗します。正解時は、その1語の入力中に一度も使わなかった未破損キーが1段階回復。誤答では回復せず、消した文字のキー使用も取り消されません。頻出キーを温存する語選びと、入力経路の設計が生存時間を左右します。</p>
+          <p>v0.2.2では、文字数ボーナスを「実際に確定したローマ字入力数」で計算。たとえば「し」を <code>shi</code> と打てば <code>si</code> より高得点になる一方、Hキーも摩耗します。短く安全に打つか、キーを追加で使って得点を伸ばすか。同じ読みの中にもリスクとリターンが生まれました。</p>
         </div>
         <aside class="spec-sheet" aria-label="ゲーム仕様">
           <p class="stamp">SPECIFICATION</p>
           <dl>
+            <div><dt>VERSION</dt><dd>v0.2.2</dd></div>
             <div><dt>GENRE</dt><dd>KANJI READING / SURVIVAL TYPING</dd></div>
             <div><dt>PLATFORM</dt><dd>WEB BROWSER</dd></div>
             <div><dt>DEVICE</dt><dd>PC / PHYSICAL KEYBOARD</dd></div>
             <div><dt>MODE</dt><dd>30 SEC / 20 WORDS</dd></div>
             <div><dt>LEVEL</dt><dd>5 DIFFICULTIES</dd></div>
-            <div><dt>WORDS</dt><dd>531</dd></div>
+            <div><dt>VOCABULARY</dt><dd>1,048 WORDS / 1,058 READINGS</dd></div>
+            <div><dt>SAVE</dt><dd>LOCAL TOP 5</dd></div>
             <div><dt>STATUS</dt><dd>IN DEVELOPMENT</dd></div>
           </dl>
         </aside>
       </section>
 
       <section class="feature-spread" aria-labelledby="features-title">
-        <div class="section-heading"><p>FEATURE REPORT</p><h2 id="features-title">ゲームの特徴</h2></div>
-        <div class="feature-grid">
-          <article class="feature-card"><span class="feature-card__number">01</span><h3>3語から選ぶ</h3><p>表示された3語のうち、読めるものならどれを選んでも正解。漢字力とキーの残り具合を見比べて入力する語を決めます。</p></article>
-          <article class="feature-card"><span class="feature-card__number">02</span><h3>キーが摩耗する</h3><p>使用したキーは正常から黄、赤へ変化し、3判定連続で使うと破損。誤答やBackspaceも無傷では済みません。</p></article>
-          <article class="feature-card"><span class="feature-card__number">03</span><h3>壊れてからが本番</h3><p>破損した文字は Shift＋反対側キーで代替入力。限られた再抽選も使い、入力経路を組み替えて続行します。</p></article>
+        <div class="section-heading"><p>CORE SYSTEM</p><h2 id="features-title">正解語だけでなく、打ち方も選択肢になる</h2></div>
+        <div class="feature-grid feature-grid--kanji">
+          <article class="feature-card"><span class="feature-card__number">01</span><h3>3語のどれでも正解</h3><p>カードを選択する操作はありません。表示された3語のうち、どれか1語の読みをローマ字で入力してEnter。漢字の知識と、今のキーで完走できるかを同時に判断します。</p></article>
+          <article class="feature-card"><span class="feature-card__number">02</span><h3>入力した長さが得点になる</h3><p><code>shi / si</code>、<code>chi / ti</code>など複数のローマ字表記に対応。実際に確定した入力数が文字数ボーナスへ反映され、使ったキーもそのまま摩耗対象になります。</p></article>
+          <article class="feature-card"><span class="feature-card__number">03</span><h3>使うキーと休ませるキー</h3><p>使ったキーは判定ごとに1段階摩耗。正解した場合だけ、入力中に一度も使わなかった黄・赤のキーが1段階回復します。Enterは摩耗対象外です。</p></article>
+          <article class="feature-card"><span class="feature-card__number">04</span><h3>破損後も判断は続く</h3><p>破損キーは両モードともゲーム内時間10秒で正常へ復帰。3語すべてが入力不能でも即終了せず、復活を待つか、1ゲーム1回の再抽選を使うか選べます。</p></article>
+        </div>
+      </section>
+
+      <section class="mode-comparison" aria-labelledby="modes-title">
+        <div class="section-heading"><p>TWO MODES</p><h2 id="modes-title">速さを攻める30秒、崩さず完走する20語</h2></div>
+        <div class="mode-comparison__grid">
+          <article class="mode-card">
+            <p class="mode-card__index">MODE A</p>
+            <h3><strong>30</strong>秒 スコアアタック</h3>
+            <p>30秒の制限時間内に高得点を積み上げるモード。正解語の難易度、確定した入力数、キーボードの健全率、破損キーがない状態を加味して得点が決まります。</p>
+            <ul>
+              <li>長い入力ほど文字数ボーナスが増加</li>
+              <li>高得点を狙うほど使用キーも増える</li>
+              <li>誤答は使用キーを摩耗させ、少量減点</li>
+            </ul>
+          </article>
+          <article class="mode-card mode-card--danger">
+            <p class="mode-card__index">MODE B</p>
+            <h3><strong>20</strong>語 サバイバル</h3>
+            <p>5個のハートを守りながら20語完走を目指すタイム＋スコアモード。誤入力でHPが1減り、5回目のミスでゲームオーバー。空欄EnterではHPを消費しません。</p>
+            <ul>
+              <li>進行に応じて出題難易度が段階的に上昇</li>
+              <li>クリア時にタイムボーナスを加算</li>
+              <li>ノークラッシュ完走には追加ボーナス</li>
+            </ul>
+          </article>
         </div>
       </section>
 
       <section class="image-report" aria-labelledby="play-screen-title">
-        <div class="image-report__heading"><p>PLAY REPORT</p><h2 id="play-screen-title">摩耗するキーボードを見ながら入力</h2></div>
+        <div class="image-report__heading"><p>PLAY REPORT</p><h2 id="play-screen-title">漢字・HP・キー状態を一画面で読む</h2></div>
         <figure class="image-report__scene image-report__scene--screen">
-          <img src="./assets/kanji-crash-play.webp" alt="漢字 de クラッシュキーボードのプレイ画面。3つの漢字語、入力欄、残り時間、スコア、キーの状態を示すキーボードが表示されている" width="1918" height="1078" loading="lazy">
-          <figcaption>画面下のキーボードで、正常・黄・赤・破損の状態を確認できます。どの読みを選ぶかが、そのまま次の入力可能性に影響します。</figcaption>
+          <img src="./assets/kanji-crash-play.webp" alt="20語モードのプレイ画面。5個のHP、3つの漢字語、入力欄、再抽選、キー状態、破損キーの復活案内が表示されている" width="1600" height="1000" loading="lazy">
+          <figcaption>20語モードのプレイ画面。上部で経過時間・クリア数・スコア・破損回数・HPを確認し、下部のキーボードで正常・黄・赤・破損の状態を把握します。</figcaption>
         </figure>
+      </section>
+
+      <section class="mechanic-report" id="how-to" aria-labelledby="how-to-title">
+        <div class="section-heading"><p>JUDGEMENT FLOW</p><h2 id="how-to-title">1語を確定するまでの4つの判断</h2></div>
+        <ol class="mechanic-flow">
+          <li><span>01</span><div><h3>3語から攻略対象を決める</h3><p>読めるかどうかだけでなく、破損キーを避けて最後まで打てるか、頻出キーを温存できるかを見ます。</p></div></li>
+          <li><span>02</span><div><h3>ローマ字の経路を決める</h3><p><code>shi / si</code>など、同じ読みでも複数の入力が可能。長い表記は高得点ですが、追加したキーも摩耗します。</p></div></li>
+          <li><span>03</span><div><h3>Enterで摩耗と得点を確定</h3><p>文字キーとBackspaceの使用履歴を記録。消した文字も使用済みのままで、正解・誤答にかかわらず使用キーが悪化します。</p></div></li>
+          <li><span>04</span><div><h3>次の1語へ向けて立て直す</h3><p>正解時のみ未使用キーが1段階回復。破損した場合は10秒待つか、入力不能時に1回限りの再抽選を使います。</p></div></li>
+        </ol>
       </section>
 
       <aside class="ad-area" aria-label="広告"><p class="ad-area__label">広告</p><div class="ad-area__placeholder"><span>ADVERTISEMENT SPACE</span><small>ゲーム開始ボタン・操作領域とは分離</small></div></aside>
 
-      <section class="notice-panel" id="how-to" aria-labelledby="before-play-title">
+      <section class="record-report" aria-labelledby="records-title">
+        <div class="record-report__copy">
+          <p class="eyebrow">LOCAL RECORDS</p>
+          <h2 id="records-title">各モード・各難易度のTOP 5を端末内へ</h2>
+          <p>30秒／20語と5段階の難易度、それぞれの上位5記録をブラウザのローカルストレージへ保存します。世界ランキングやアカウント登録はありません。</p>
+          <p>ランキング画面はPNG画像として保存・共有可能。タイムアップまたはHP切れで終了した場合は、最後に表示されていた3語すべてのひらがな読みとローマ字入力例を結果画面で確認できます。</p>
+        </div>
+        <figure class="record-report__image">
+          <img src="./assets/kanji-crash-highscore.webp" alt="20語モード中級のローカルTOP5画面。モードと難易度を切り替え、ランキング画像を共有できる" width="1600" height="1000" loading="lazy">
+          <figcaption>LOCAL TOP 5はモード・難易度別に保存。ランキング画像の共有にも対応します。</figcaption>
+        </figure>
+      </section>
+
+      <section class="notice-panel" aria-labelledby="before-play-title">
         <p class="eyebrow">BEFORE PLAY</p>
-        <h2 id="before-play-title">基本ルールとプレイ前のご案内</h2>
+        <h2 id="before-play-title">プレイ前のご案内</h2>
         <ul class="rule-list">
-          <li><strong>3語から1語をローマ字入力。</strong><span>読みを入力して Enter で判定します。30秒でスコアを競うモードと、20語の完走時間を競うモードがあります。</span></li>
-          <li><strong>正解時は未使用キーが回復。</strong><span>使う文字が偏らない語を選ぶほど、キーボード全体を長く保ちやすくなります。</span></li>
-          <li><strong>壊れた文字は代替入力。</strong><span>Shift とキーボード反対側の対応キーを組み合わせて入力します。Shift 自身も使い続けると摩耗します。</span></li>
-          <li><strong>PC・物理キーボード推奨。</strong><span>キー配置と同時押しをゲーム性に使用します。スマートフォンより、PCブラウザでのプレイをおすすめします。</span></li>
-          <li><strong>開発中の作品です。</strong><span>語彙、難易度、バランス、画面構成などを予告なく変更する場合があります。難易度は初級・中級・上級・超級・鬼の5段階です。表記は本ゲーム独自の目安で、漢検の公式判定ではありません。</span></li>
+          <li><strong>PC・物理キーボード推奨。</strong><span>アルファベットキーとBackspaceの物理入力そのものをゲーム性に使用します。スマートフォンよりPCブラウザでのプレイをおすすめします。</span></li>
+          <li><strong>長い入力は高得点、ただし摩耗も増加。</strong><span>文字数ボーナスは実際に確定したローマ字入力数で計算されます。追加で使ったキーは得点だけでなく、摩耗状態にも反映されます。</span></li>
+          <li><strong>難易度はゲーム独自の目安。</strong><span>初級・中級・上級・超級・鬼の5段階。学校学習段階や漢検の対象漢字範囲を参考にしていますが、漢検協会の監修・認定・公式級判定ではありません。</span></li>
+          <li><strong>1,048語・1,058通りの読みを収録。</strong><span>v0.2.1で語彙を大幅増量。複数読みを持つ語では、実際に正解した読みと入力方法が採点へ反映されます。</span></li>
+          <li><strong>開発中の作品です。</strong><span>語彙、難易度、スコア、バランス、画面構成、保存形式などを予告なく変更する場合があります。</span></li>
         </ul>
       </section>
 
       <div class="detail-actions"><a class="button button--primary button--large" href="https://yuzora-yu.github.io/kanji-de-crash-keyboard/">ゲームを開始する</a><a class="text-arrow" href="./">ポータルへ戻る →</a></div>
-      <p class="asset-note">掲載画像は、制作者から提供されたゲーム画面をポータル表示用に最適化して使用しています。</p>
+      <p class="asset-note">ゲーム仕様はGitHubリポジトリのv0.2.2（commit <code>91cbe06</code>）にあるREADME・CHANGELOG・実装ファイルを確認して記載しています。掲載画面はv0.2.0配布ZIPをローカル実行して撮影したもので、v0.2.2では語彙と採点ルールが更新されています。アイコンはゲーム配布ZIP内の <code>assets/icon.svg</code> をそのまま使用しています。</p>
     </article>
   </main>
   <footer class="site-footer"><div class="site-footer__inner"><p><strong>YUZORA GAME ARCHIVE</strong><br><small>GAME FILE 02</small></p><nav class="footer-policy-nav" aria-label="サイトポリシー"><a href="./privacy.html">プライバシー</a><a href="./terms.html">利用規約</a><a href="./disclaimer.html">免責事項</a></nav><p>© 2026 Yuzora-Yu</p></div></footer>
