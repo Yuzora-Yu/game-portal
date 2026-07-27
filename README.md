@@ -6,6 +6,7 @@
 
 - `index.html`: トップページ。ゲーム詳細、ニュース、開発者、各ポリシーへの導線
 - `game-prisma-abyss.html`: PRISMA ABYSS 詳細ページ
+- `game-kanji-crash-keyboard.html`: 漢字 de クラッシュキーボード 詳細ページ
 - `news.html`: お知らせ一覧
 - `news/*.html`: お知らせ詳細ページ
 - `scripts/news-data.js`: トップと一覧に表示するお知らせデータの正本
@@ -61,9 +62,10 @@ python -m http.server 8000
 
 ## 画像素材
 
-ゲーム詳細ページでは、ゲーム内素材をポータル用に複製・WebP化して使用しています。
+ゲーム詳細ページでは、ゲーム内素材をポータル用に複製・WebP化して使用しています。漢字 de クラッシュキーボードの画面はv0.2.0配布ZIPをローカル実行して撮影しています。
 
 - 横長背景: `assets/prisma-medal-hall.webp`
+- 漢字 de クラッシュキーボード: `assets/kanji-crash-start.webp`、`assets/kanji-crash-play.webp`、`assets/kanji-crash-highscore.webp`、`assets/kanji-crash-icon.svg`（配布ZIP内アイコンをそのまま使用）
 - キャラクター: ジョセフ、エリーゼ、リーシア
 - モンスター: かえんりゅう、アクアリリィ、ブリーズリザード
 
