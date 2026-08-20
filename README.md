@@ -20,6 +20,11 @@
 - `styles.css`: 全ページ共通スタイル
 - `assets/`: ポータル表示用のゲーム画像
 
+
+## 親サイト
+
+このゲームポータルは YU-ZORA のゲーム配下として公開します。各ページのヘッダーとフッターには、母艦へ戻るための `https://yu-zora.com/` リンクを設置しています。
+
 ## ローカル確認
 
 `file://` でも基本表示できますが、公開時と同じ相対パス確認のため、HTTPサーバーを推奨します。
@@ -55,8 +60,8 @@ python -m http.server 8000
 
 `developer.html` 内の以下2種類のURLを変更すると、表示アカウントを切り替えられます。
 
-- `https://x.com/yuzora_yu`
-- `https://twitter.com/yuzora_yu`（埋め込みウィジェット用）
+- `https://x.com/yuu_mintia`
+- `https://twitter.com/yuu_mintia`（埋め込みウィジェット用）
 
 外部スクリプトやトラッキング防止設定により表示されない場合があるため、プロフィールへの通常リンクも併設しています。
 

@@ -5,6 +5,14 @@
  */
 window.NEWS_POSTS = [
   {
+    id: "2026-08-20-yu-zora-domain-migration",
+    date: "2026-08-20",
+    title: "yu-zora.comを取得し、ゲームを移行しました",
+    category: "SITE UPDATE",
+    summary: "2026年8月20日にyu-zora.comを取得し、ゲームをYU-ZORA配下へ移行しました。",
+    url: "./news/2026-08-20-yu-zora-domain-migration.html"
+  },
+  {
     id: "2026-07-24-portal-open",
     date: "2026-07-24",
     title: "ポータルサイト試作版を公開しました",

@@ -112,9 +112,9 @@
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
-  <header class="site-header"><div class="site-header__inner"><a class="brand" href="../"><span class="brand__mark" aria-hidden="true">◆</span><span><strong>YUZORA GAME ARCHIVE</strong><small>個人制作ブラウザゲーム保管庫</small></span></a><nav class="global-nav" aria-label="主要ナビゲーション"><a href="../#games">GAMES</a><a href="../news.html" aria-current="page">NEWS</a><a href="../developer.html">DEVELOPER</a><a href="../privacy.html">PRIVACY</a></nav></div></header>
+  <header class="site-header"><div class="site-header__inner"><a class="brand" href="../"><span class="brand__mark" aria-hidden="true">◆</span><span><strong>YUZORA GAME ARCHIVE</strong><small>個人制作ブラウザゲーム保管庫</small></span></a><nav class="global-nav" aria-label="主要ナビゲーション"><a class="global-nav__archive" href="https://yu-zora.com/" aria-label="YU-ZORAトップへ戻る">YU-ZORA ↗</a><a href="../#games">GAMES</a><a href="../news.html" aria-current="page">NEWS</a><a href="../developer.html">DEVELOPER</a><a href="../privacy.html">PRIVACY</a></nav></div></header>
   <main id="main" class="subpage"><article class="news-article"><header class="news-article__header"><p class="eyebrow">${escapeHtml(post.category)}</p><time datetime="${escapeAttr(post.date)}">${escapeHtml(formatDate(post.date))}</time><h1>${title}</h1><p class="news-article__summary">${escapeHtml(post.summary)}</p></header><div class="news-article__body">${bodyToHtml(post.body)}</div><footer class="news-article__footer"><a class="text-arrow" href="../news.html">お知らせ一覧へ戻る →</a><a class="button" href="../">ポータルトップ</a></footer></article></main>
-  <footer class="site-footer"><div class="site-footer__inner"><p><strong>YUZORA GAME ARCHIVE</strong><br><small>DEVELOPMENT LOG</small></p><nav class="footer-policy-nav" aria-label="サイトポリシー"><a href="../privacy.html">プライバシー</a><a href="../terms.html">利用規約</a><a href="../disclaimer.html">免責事項</a></nav><p>© 2026 Yuzora-Yu</p></div></footer>
+  <footer class="site-footer"><div class="site-footer__inner"><p><strong>YUZORA GAME ARCHIVE</strong><br><small>DEVELOPMENT LOG</small></p><nav class="footer-policy-nav" aria-label="サイトポリシー"><a href="https://yu-zora.com/">YU-ZORAトップ</a><a href="../privacy.html">プライバシー</a><a href="../terms.html">利用規約</a><a href="../disclaimer.html">免責事項</a></nav><p>© 2026 夕空ユウ</p></div></footer>
 </body>
 </html>\n`;
   }
