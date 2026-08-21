@@ -343,3 +343,280 @@ dd { margin: 0; font-size: .88rem; font-weight: 700; }
   body::before { display: none; }
   .subpage, .detail-page, .news-article, .policy-document { width: 100%; max-width: none; margin: 0; padding: 0; border: 0; box-shadow: none; }
 }
+
+/* YU-ZORA shared shell alignment v2 (2026-08)
+   GAMES keeps its paper/poster visual language, while the outer site shell follows YU-ZORA. */
+:root {
+  --content: 116rem;
+  --page-gutter: clamp(16px, 1.5vw, 28px);
+  --mobile-inset: clamp(16px, 4.5vw, 22px);
+  --header-height: 68px;
+  --subnav-height: 48px;
+  --header-offset: calc(var(--header-height) + var(--subnav-height) + .75rem);
+}
+
+/* Shared YU-ZORA global header. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 120;
+  border-bottom: 1px solid var(--paper-dark);
+  background: rgba(248, 242, 229, .98);
+}
+.site-header__inner {
+  width: 100%;
+  min-height: var(--header-height);
+  margin: 0;
+  padding-inline: var(--page-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -.02em;
+  text-decoration: none;
+}
+.brand:hover { color: var(--ink); }
+.brand__mark {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 auto;
+  border: 0;
+  background: var(--accent);
+  transform: rotate(45deg);
+  font-size: 0;
+}
+.brand__name { white-space: nowrap; font-size: 16px; }
+.brand small {
+  display: inline;
+  margin: 1px 0 0;
+  color: var(--muted);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: .08em;
+}
+.global-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: .05em;
+}
+.global-nav a {
+  min-height: 0;
+  padding: 22px 0 20px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.global-nav a:hover,
+.global-nav a[aria-current="page"] {
+  color: var(--ink);
+  background: transparent;
+  border-bottom-color: var(--accent);
+}
+
+/* GAMES-specific navigation now sits below the common site shell. */
+.games-subnav {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 110;
+  min-height: var(--subnav-height);
+  border-bottom: 1px solid var(--paper-dark);
+  background: rgba(238, 230, 210, .97);
+}
+.games-subnav__inner {
+  width: 100%;
+  min-height: var(--subnav-height);
+  padding-inline: var(--page-gutter);
+  display: flex;
+  align-items: stretch;
+  gap: 26px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.games-subnav__inner::-webkit-scrollbar { display: none; }
+.games-subnav a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  padding-top: 2px;
+  color: var(--muted);
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 760;
+  letter-spacing: .055em;
+  text-decoration: none;
+}
+.games-subnav a:hover,
+.games-subnav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+/* Full-width outer shell. The game archive itself keeps small readable insets. */
+.hero,
+.section,
+.ad-area,
+.subpage,
+.detail-page {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: var(--page-gutter);
+}
+.site-footer__inner {
+  width: 100%;
+  min-height: 8rem;
+  margin: 0;
+  padding-inline: var(--page-gutter);
+}
+
+/* Game-portal identity stays inside the GAMES hero instead of competing with the global brand. */
+.hero-portal-label {
+  margin: 0 0 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px 14px;
+  flex-wrap: wrap;
+  font-family: var(--font-body);
+  line-height: 1.3;
+}
+.hero-portal-label strong {
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .09em;
+}
+.hero-portal-label span {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .06em;
+}
+
+/* Match the overall YU-ZORA scale while retaining the archive's condensed display face. */
+h1 { font-size: clamp(44px, 4.25vw, 72px); }
+h2 { font-size: clamp(28px, 2.6vw, 44px); }
+h3 { font-size: clamp(21px, 2vw, 32px); }
+.hero__lead,
+.lead-copy { font-size: clamp(16px, 1.35vw, 18px); }
+.page-masthead h1 { font-size: clamp(36px, 4vw, 58px); }
+.prose-block h1 { font-size: clamp(38px, 4.25vw, 64px); }
+.news-article__header h1 { font-size: clamp(32px, 3.8vw, 54px); }
+.hero h1::after { height: 9px; margin-top: 24px; }
+
+/* Wide displays use the viewport intentionally, not a narrow centered document. */
+@media (min-width: 1500px) {
+  .hero { grid-template-columns: minmax(0, 1.55fr) minmax(18rem, .55fr); gap: clamp(3rem, 5vw, 6rem); }
+  .game-entry { grid-template-columns: minmax(0, 1.12fr) minmax(22rem, .88fr); }
+  .game-entry__visual { min-height: clamp(29rem, 31vw, 38rem); }
+  .detail-grid { grid-template-columns: minmax(0, 1.35fr) minmax(19rem, .55fr); gap: clamp(3rem, 5vw, 5.5rem); }
+  .prose-block { max-width: 52rem; }
+}
+
+@media (max-width: 850px) {
+  :root {
+    --header-height: 57px;
+    --subnav-height: 43px;
+    --header-offset: calc(var(--header-height) + var(--subnav-height) + .5rem);
+    --page-gutter: var(--mobile-inset);
+  }
+  .site-header__inner {
+    min-height: var(--header-height);
+    padding: 13px var(--mobile-inset) 9px;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .brand { flex: 0 1 auto; }
+  .brand__name { font-size: 16px; }
+  .brand small { display: none; }
+  .global-nav {
+    width: auto;
+    max-width: 62%;
+    margin-left: auto;
+    justify-content: flex-end;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    gap: 1px 12px;
+    overflow: visible;
+    font-size: 10px;
+    line-height: 1.1;
+  }
+  .global-nav a { min-height: 0; padding: 7px 0 10px; }
+  .games-subnav__inner { gap: 20px; }
+  .games-subnav a { font-size: 10px; }
+
+  .hero,
+  .game-entry,
+  .section--split,
+  .detail-grid,
+  .developer-grid,
+  .editor-grid,
+  .record-report { grid-template-columns: 1fr; }
+  .hero { min-height: auto; }
+  .hero__note { max-width: 31rem; transform: none; }
+}
+
+@media (max-width: 560px) {
+  :root { --page-gutter: 0px; }
+
+  /* Full-bleed cards/media on phones; prose gets its own safe inset. */
+  .hero,
+  .section,
+  .ad-area,
+  .subpage,
+  .detail-page { width: 100%; padding-inline: 0; }
+
+  .hero { padding-inline: var(--mobile-inset); }
+  .hero-portal-label { margin-bottom: 16px; display: grid; gap: 5px; }
+  .hero-portal-label strong { font-size: 11px; }
+  .hero-portal-label span { font-size: 9px; }
+  .hero h1 { font-size: clamp(38px, 11vw, 50px); }
+  .hero h1::after { width: min(220px, 58vw); height: 8px; margin-top: 20px; }
+
+  #games > .section-heading,
+  #games > .next-file { margin-inline: var(--mobile-inset); }
+  .section--split { padding-inline: var(--mobile-inset); }
+  .subpage > .page-masthead { margin-inline: 0; }
+  .subpage > :not(.page-masthead) { margin-inline: var(--mobile-inset); }
+
+  .detail-page > .game-detail-hero { margin-inline: 0; border-left: 0; border-right: 0; box-shadow: none; }
+  .detail-page > .detail-actions,
+  .detail-page > .detail-grid,
+  .detail-page > .feature-spread,
+  .detail-page > .mode-comparison,
+  .detail-page > .mechanic-report,
+  .detail-page > .record-report,
+  .detail-page > .notice-panel,
+  .detail-page > .asset-note { margin-left: var(--mobile-inset); margin-right: var(--mobile-inset); }
+  .detail-page > .image-report { margin-left: 0; margin-right: 0; }
+
+  .site-footer__inner { padding-inline: var(--mobile-inset); }
+  .page-masthead { border-left-width: 8px; box-shadow: none; }
+  .game-entry { border-left: 0; border-right: 0; box-shadow: none; }
+  .ad-area__placeholder { border-left: 0; border-right: 0; }
+}
+
+@media print {
+  .games-subnav { display: none !important; }
+}
