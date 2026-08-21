@@ -3,9 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ブラウザ向けハック＆スラッシュRPG『PRISMA ABYSS』のゲーム詳細・遊び方・開発状況。">
+  <meta name="description" content="ブラウザRPG『PRISMA ABYSS』。六属性プリズムを巡る長編物語、4人パーティ、装備厳選・鍛冶・錬金・魔物図鑑・深淵探索など、作品の特徴と遊び方を紹介します。">
   <meta name="theme-color" content="#201d17">
-  <title>PRISMA ABYSS | YU-ZORA GAME PORTAL</title>
+  <link rel="canonical" href="https://yu-zora.com/games/game-prisma-abyss.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PRISMA ABYSS | YU-ZORA GAMES">
+  <meta property="og:description" content="探索し、戦い、拾い、鍛え、仲間と深部へ。個人制作のブラウザRPG『PRISMA ABYSS』。">
+  <meta property="og:image" content="https://yu-zora.com/games/assets/prisma-abyss-keyart.webp">
+  <meta property="og:url" content="https://yu-zora.com/games/game-prisma-abyss.html">
+  <title>PRISMA ABYSS | YU-ZORA GAMES</title>
   <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
   <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
@@ -40,61 +46,145 @@
   </nav>
 
   <main id="main">
-    <article class="detail-page">
-      <header class="game-detail-hero">
+    <article class="detail-page prisma-page">
+      <header class="game-detail-hero prisma-hero">
         <img class="game-detail-hero__image" src="./assets/prisma-abyss-keyart.webp" alt="PRISMA ABYSSのタイトルビジュアル" width="1774" height="887">
-        <div class="game-detail-hero__overlay"><p class="file-index">GAME FILE 01 / IN DEVELOPMENT</p><img src="./assets/prisma-abyss-logo.png" alt="PRISMA ABYSS" width="1774" height="887"><p>拾い、鍛え、編成し、深部へ進む。<br>スマートフォン向けブラウザ・ハック＆スラッシュRPG。</p></div>
+        <div class="game-detail-hero__overlay">
+          <p class="file-index">GAME FILE 01 / IN DEVELOPMENT</p>
+          <img src="./assets/prisma-abyss-logo.png" alt="PRISMA ABYSS" width="1774" height="887">
+          <p>探索し、戦い、拾い、鍛え、仲間と深部へ。<br>PC・スマートフォンで遊べる個人制作ブラウザRPG。</p>
+        </div>
       </header>
 
-      <div class="detail-actions detail-actions--top">
+      <div class="detail-actions detail-actions--top prisma-top-actions">
         <a class="button button--primary button--large" href="/games/Prisma-Abyss/">PLAY GAME</a>
+        <span class="prisma-status">DEVELOPMENT BUILD</span>
+        <span class="prisma-status">NO INSTALL</span>
+        <span class="prisma-status">LOCAL SAVE</span>
       </div>
 
-      <section class="detail-grid" aria-labelledby="overview-title">
-        <div class="prose-block"><p class="eyebrow">OVERVIEW</p><h1 id="overview-title">PRISMA ABYSS</h1><p class="lead-copy">ダンジョンを探索し、装備を集め、仲間を編成して進む開発中のRPGです。ブラウザから起動でき、スマートフォンでの操作を中心に調整されています。</p><p>本ページではゲーム本体と分離して、作品内容、セーブ方式、開発上の注意事項を確認できます。広告を設置する場合も、ゲーム開始ボタンや操作領域と十分な距離を確保します。</p></div>
-        <aside class="spec-sheet" aria-label="ゲーム仕様"><p class="stamp">SPECIFICATION</p><dl><div><dt>GENRE</dt><dd>HACK &amp; SLASH RPG</dd></div><div><dt>PLATFORM</dt><dd>WEB BROWSER</dd></div><div><dt>DEVICE</dt><dd>SMARTPHONE / PC</dd></div><div><dt>PRICE</dt><dd>FREE</dd></div><div><dt>SAVE</dt><dd>LOCAL DEVICE / EXPORT</dd></div></dl></aside>
-      </section>
-
-      <section class="feature-spread" aria-labelledby="features-title">
-        <div class="section-heading"><p>FEATURE REPORT</p><h2 id="features-title">ゲームの特徴</h2></div>
-        <div class="feature-grid">
-          <article class="feature-card"><span class="feature-card__number">01</span><h3>探索と収集</h3><p>ダンジョンを進みながら装備やアイテムを集め、次の探索に備えます。</p></article>
-          <article class="feature-card"><span class="feature-card__number">02</span><h3>装備の更新</h3><p>入手した装備を比較し、編成や育成方針に合わせて戦力を整えます。</p></article>
-          <article class="feature-card"><span class="feature-card__number">03</span><h3>仲間編成</h3><p>仲間の組み合わせを考え、状況に応じたパーティーで攻略します。</p></article>
+      <section class="prisma-story" aria-labelledby="prisma-story-title">
+        <div class="prisma-story__copy">
+          <p class="eyebrow">STORY / NO SPOILERS</p>
+          <h1 id="prisma-story-title">六つの光が砕けた日から、<br>旅は始まる。</h1>
+          <p class="lead-copy">世界を支える火・水・風・雷・光・闇――六つのプリズム。5年前の「プリズム崩壊」で故郷と大切なものを失った少年アルスは、各地で起きる異変を追いながら、自分の過去と世界のひずみに向き合っていきます。</p>
+          <p>PRISMA ABYSSは、ダンジョン攻略と装備収集だけでなく、旅の中で出会う人々の誤解、後悔、再会、選び直しを重ねていく長編RPGです。仲間が増えるほど戦い方が広がり、同時に世界の見え方も変わっていきます。</p>
+          <div class="prisma-story__tags" aria-label="作品キーワード"><span>六属性プリズム</span><span>群像劇</span><span>仲間と編成</span><span>ハック＆スラッシュ</span></div>
         </div>
-      </section>
-
-      <section class="image-report" aria-labelledby="visual-archive-title">
-        <h2 class="visually-hidden" id="visual-archive-title">ゲーム内ビジュアル</h2>
-        <figure class="image-report__scene">
-          <img src="./assets/prisma-medal-hall.webp" alt="PRISMA ABYSSのメダル交換施設を描いた横長の背景" width="2401" height="1352" loading="lazy">
+        <figure class="prisma-story__visual">
+          <img src="./assets/prisma-showcase/world-prism-collapse.webp" alt="大地を走る亀裂と六色の光を描いたプリズム崩壊のイメージ" width="1500" height="844" loading="lazy">
+          <figcaption>THE PRISM COLLAPSE — 物語の起点となる、5年前の大災害。</figcaption>
         </figure>
+      </section>
 
-        <div class="image-report__collection" aria-labelledby="character-visuals-title">
-          <div class="image-report__heading"><p>PARTY FILE</p><h3 id="character-visuals-title">CHARACTERS</h3></div>
-          <div class="image-report__grid image-report__grid--characters">
-            <figure class="image-report__portrait"><img src="./assets/char-face-101.webp" alt="キャラクターのジョセフ" width="953" height="954" loading="lazy"></figure>
-            <figure class="image-report__portrait"><img src="./assets/char-face-106.webp" alt="キャラクターのエリーゼ" width="954" height="954" loading="lazy"></figure>
-            <figure class="image-report__portrait"><img src="./assets/char-face-303.webp" alt="キャラクターのリーシア" width="953" height="953" loading="lazy"></figure>
+      <section class="prisma-loop" aria-labelledby="prisma-loop-title">
+        <div class="section-heading prisma-section-heading"><p>CORE LOOP</p><h2 id="prisma-loop-title">戦って終わりじゃない。次の一歩を、自分で組み直す。</h2></div>
+        <ol class="prisma-loop__grid">
+          <li><span>01</span><h3>EXPLORE</h3><strong>歩く・探す</strong><p>フィールドやダンジョンを進み、敵・宝箱・イベント・寄り道を見つける。</p></li>
+          <li><span>02</span><h3>BATTLE</h3><strong>戦う・見極める</strong><p>4人パーティを軸に、通常攻撃・特技・道具・防御・作戦を使い分ける。</p></li>
+          <li><span>03</span><h3>LOOT</h3><strong>拾う・比べる</strong><p>装備や素材を持ち帰り、能力だけでなくオプション・特性・シナジーを比較する。</p></li>
+          <li><span>04</span><h3>BUILD</h3><strong>鍛える・再編する</strong><p>装備、仲間、スキル、鍛冶・錬金を見直し、より深い場所へ挑む。</p></li>
+        </ol>
+      </section>
+
+      <section class="prisma-world" aria-labelledby="prisma-world-title">
+        <div class="prisma-world__lead">
+          <p class="eyebrow">FIELD &amp; BATTLE</p>
+          <h2 id="prisma-world-title">土地が変われば、空気も戦いも変わる。</h2>
+          <p>火山、海底神殿、光の宮殿、そして深淵。物語の進行に合わせて景色と敵の傾向が変わり、探索の手触りも段階的に広がります。</p>
+        </div>
+        <div class="prisma-world__gallery">
+          <figure class="prisma-world__wide"><img src="./assets/prisma-showcase/battle-first-field.webp" alt="夕暮れの平原" width="960" height="540" loading="lazy"><figcaption>FIELD / 冒険の始まり</figcaption></figure>
+          <figure><img src="./assets/prisma-showcase/battle-fire.webp" alt="溶岩が流れる火のダンジョン" width="1100" height="620" loading="lazy"><figcaption>FIRE / 熱と地形</figcaption></figure>
+          <figure><img src="./assets/prisma-showcase/battle-seabed.webp" alt="青い光に包まれた海底神殿" width="960" height="540" loading="lazy"><figcaption>WATER / 海底神殿</figcaption></figure>
+          <figure class="prisma-world__wide"><img src="./assets/prisma-showcase/battle-abyss.webp" alt="紫色の光に包まれた深淵の空間" width="960" height="540" loading="lazy"><figcaption>ABYSS / さらに深い探索へ</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="prisma-party" aria-labelledby="prisma-party-title">
+        <div class="prisma-party__copy">
+          <p class="eyebrow">PARTY</p>
+          <h2 id="prisma-party-title">仲間は、ただのステータスじゃない。</h2>
+          <p>物語の中で出会った人物が仲間になり、それぞれ異なる職・能力・スキル・特性を持って戦います。4人の戦闘メンバーをどう組むか、誰を育てるかで攻略の形が変わります。</p>
+          <p>能力や装備だけでなく、人物同士の過去や関係も物語の中で積み重なっていきます。</p>
+        </div>
+        <div class="prisma-party__lineup" aria-label="主要キャラクター">
+          <figure><img src="./assets/prisma-showcase/char-ars.webp" alt="主人公アルス" width="667" height="1000" loading="lazy"><figcaption><strong>アルス</strong><span>勇者 / 主人公</span></figcaption></figure>
+          <figure><img src="./assets/prisma-showcase/char-luna.webp" alt="ルーナ" width="667" height="1000" loading="lazy"><figcaption><strong>ルーナ</strong><span>聖女</span></figcaption></figure>
+          <figure><img src="./assets/prisma-showcase/char-sophia.webp" alt="ソフィア" width="667" height="1000" loading="lazy"><figcaption><strong>ソフィア</strong><span>賢者</span></figcaption></figure>
+          <figure><img src="./assets/prisma-showcase/char-layla.webp" alt="レイラ" width="667" height="1000" loading="lazy"><figcaption><strong>レイラ</strong><span>聖騎士</span></figcaption></figure>
+        </div>
+      </section>
+
+      <section class="prisma-equipment" aria-labelledby="prisma-equipment-title">
+        <div class="prisma-equipment__display">
+          <p class="eyebrow">EQUIPMENT FILE</p>
+          <div class="prisma-equipment__icons">
+            <figure><img src="./assets/prisma-showcase/equip-end-sword.webp" alt="終焉の剣" width="64" height="64" loading="lazy"><figcaption>終焉の剣</figcaption></figure>
+            <figure><img src="./assets/prisma-showcase/equip-cosmo-rod.webp" alt="コスモロッド" width="64" height="64" loading="lazy"><figcaption>コスモロッド</figcaption></figure>
+            <figure><img src="./assets/prisma-showcase/equip-celestial-shield.webp" alt="天界の盾" width="64" height="64" loading="lazy"><figcaption>天界の盾</figcaption></figure>
+            <figure><img src="./assets/prisma-showcase/equip-phoenix-armor.webp" alt="鳳凰の鎧" width="64" height="64" loading="lazy"><figcaption>鳳凰の鎧</figcaption></figure>
+            <figure><img src="./assets/prisma-showcase/equip-excalibur.webp" alt="エクスカリバー" width="64" height="64" loading="lazy"><figcaption>エクスカリバー</figcaption></figure>
+            <figure><img src="./assets/prisma-showcase/equip-all-knowing-staff.webp" alt="全知の神杖" width="64" height="64" loading="lazy"><figcaption>全知の神杖</figcaption></figure>
           </div>
         </div>
+        <div class="prisma-equipment__copy">
+          <p class="eyebrow">LOOT &amp; BUILD</p>
+          <h2 id="prisma-equipment-title">同じ名前の装備でも、同じ一品とは限らない。</h2>
+          <p>装備には能力値だけでなく、ランダムな付与効果や特性が関わります。組み合わせによってシナジーが生まれるため、「数字が大きいから装備する」だけでは終わりません。</p>
+          <dl class="prisma-system-list">
+            <div><dt>OPTIONS</dt><dd>付与効果を比較して、自分のビルドに合う一品を選ぶ。</dd></div>
+            <div><dt>SYNERGY</dt><dd>特性の組み合わせを意識して、装備全体の役割を作る。</dd></div>
+            <div><dt>BLACKSMITH</dt><dd>合成・強化・精錬を使い分け、手に入れた装備をさらに育てる。</dd></div>
+            <div><dt>ALCHEMY</dt><dd>探索で集めた素材から、冒険を支える道具を作る。</dd></div>
+          </dl>
+        </div>
+      </section>
 
-        <div class="image-report__collection" aria-labelledby="monster-visuals-title">
-          <div class="image-report__heading"><p>ENEMY FILE</p><h3 id="monster-visuals-title">MONSTERS</h3></div>
-          <div class="image-report__grid image-report__grid--monsters">
-            <figure class="image-report__portrait"><img src="./assets/monster-fire-dragon.webp" alt="モンスターのかえんりゅう" width="768" height="738" loading="lazy"></figure>
-            <figure class="image-report__portrait"><img src="./assets/monster-aqua-lily.webp" alt="モンスターのアクアリリィ" width="718" height="746" loading="lazy"></figure>
-            <figure class="image-report__portrait"><img src="./assets/monster-breeze-lizard.webp" alt="モンスターのブリーズリザード" width="768" height="768" loading="lazy"></figure>
-          </div>
+      <section class="prisma-bestiary" aria-labelledby="prisma-bestiary-title">
+        <div class="section-heading prisma-section-heading"><p>BESTIARY</p><h2 id="prisma-bestiary-title">小さな魔物から、深層の異形まで。</h2></div>
+        <p class="prisma-bestiary__lead">倒した魔物は図鑑へ記録されます。地域や進行に応じて生態も強さも変化し、探索を続けるほど図鑑そのものが旅の記録になっていきます。</p>
+        <div class="prisma-bestiary__grid">
+          <figure><div><img src="./assets/prisma-showcase/monster-jelly.webp" alt="ジェリー" width="542" height="520" loading="lazy"></div><figcaption><strong>ジェリー</strong><span>RANK 1 / 粘体</span></figcaption></figure>
+          <figure><div><img src="./assets/prisma-showcase/monster-wandering-armor.webp" alt="さまよう鎧" width="512" height="407" loading="lazy"></div><figcaption><strong>さまよう鎧</strong><span>RANK 6 / 無生物</span></figcaption></figure>
+          <figure><div><img src="./assets/prisma-showcase/monster-aqua-wisp.webp" alt="アクアウィスプ" width="320" height="520" loading="lazy"></div><figcaption><strong>アクアウィスプ</strong><span>RANK 36 / 精霊</span></figcaption></figure>
+          <figure><div><img src="./assets/prisma-showcase/monster-armor-rabbit.webp" alt="アーマーラビット" width="447" height="520" loading="lazy"></div><figcaption><strong>アーマーラビット</strong><span>RANK 41 / 獣</span></figcaption></figure>
+          <figure><div><img src="./assets/prisma-showcase/monster-abyss-spore.webp" alt="アビススポア" width="406" height="520" loading="lazy"></div><figcaption><strong>アビススポア</strong><span>RANK 71 / 植物</span></figcaption></figure>
+          <figure><div><img src="./assets/prisma-showcase/monster-ignite-wolf.webp" alt="イグナイトウルフ" width="514" height="520" loading="lazy"></div><figcaption><strong>イグナイトウルフ</strong><span>RANK 91 / 獣</span></figcaption></figure>
+        </div>
+      </section>
+
+      <section class="prisma-depth" aria-labelledby="prisma-depth-title">
+        <div class="prisma-depth__intro">
+          <p class="eyebrow">BEYOND THE MAIN PATH</p>
+          <h2 id="prisma-depth-title">物語を進めても、育成はまだ終わらない。</h2>
+          <p>短い周回だけを繰り返すゲームではなく、物語・探索・収集・育成を行き来できる構成を目指して開発しています。</p>
+        </div>
+        <div class="prisma-depth__grid">
+          <article><span>01</span><h3>AUTO / SPEED</h3><p>仲間ごとの作戦を設定し、AUTO戦闘と戦闘速度変更で周回を調整。</p></article>
+          <article><span>02</span><h3>QUESTS</h3><p>本編以外の依頼や仲間に関わるクエストを進め、世界の横道を拾う。</p></article>
+          <article><span>03</span><h3>ACHIEVEMENTS</h3><p>戦闘・探索・収集・鍛冶・錬金・仲間など、プレイの積み重ねを記録。</p></article>
+          <article><span>04</span><h3>ABYSS RIFT</h3><p>物語側の深淵とは別に、到達階層を伸ばしていく「深淵の亀裂」を用意。</p></article>
+          <article><span>05</span><h3>REBIRTH</h3><p>一部の成長と引き換えに恒久的な力を得て、さらに先の育成へ。</p></article>
+          <article><span>06</span><h3>BESTIARY</h3><p>遭遇・討伐した魔物を記録し、図鑑を埋めること自体を探索目標に。</p></article>
         </div>
       </section>
 
       <aside class="ad-area" aria-label="広告"><p class="ad-area__label">広告</p><div class="ad-area__placeholder"><span>ADVERTISEMENT SPACE</span><small>ゲーム開始ボタン・操作領域とは分離</small></div></aside>
 
-      <section class="notice-panel" aria-labelledby="before-play-title"><p class="eyebrow">BEFORE PLAY</p><h2 id="before-play-title">プレイ前のご案内</h2><ul class="rule-list"><li><strong>開発版です。</strong><span>仕様やバランス、セーブデータ互換性を予告なく変更する場合があります。</span></li><li><strong>セーブデータは端末側に保存されます。</strong><span>ブラウザのデータ削除や端末変更に備え、ゲーム内のエクスポート機能をご利用ください。</span></li><li><strong>不具合報告について。</strong><span>再現手順、使用端末、ブラウザ名を添えていただくと確認しやすくなります。</span></li></ul></section>
+      <section class="notice-panel prisma-notice" aria-labelledby="before-play-title">
+        <p class="eyebrow">BEFORE PLAY</p>
+        <h2 id="before-play-title">プレイ前のご案内</h2>
+        <ul class="rule-list">
+          <li><strong>現在も開発中です。</strong><span>シナリオ、マップ、ゲームバランス、UIを継続して更新しています。更新によって仕様が変わる場合があります。</span></li>
+          <li><strong>セーブデータは端末側に保存されます。</strong><span>ブラウザのデータ削除や端末変更に備え、ゲーム内のエクスポート機能をご利用ください。</span></li>
+          <li><strong>PC・スマートフォンの両方に対応します。</strong><span>フィールド操作はタッチ操作を含めて設計し、戦闘にはAUTO・速度変更も用意しています。</span></li>
+          <li><strong>不具合報告について。</strong><span>再現手順、使用端末、ブラウザ名を添えていただくと確認しやすくなります。</span></li>
+        </ul>
+      </section>
 
-      <div class="detail-actions"><a class="button button--primary button--large" href="/games/Prisma-Abyss/">ゲームを開始する</a><a class="text-arrow" href="./">ポータルへ戻る →</a></div>
-      <p class="asset-note">掲載画像は、制作者の許可に基づき RPG-TEST リポジトリ内のゲーム素材を使用しています。</p>
+      <div class="detail-actions prisma-end-actions"><a class="button button--primary button--large" href="/games/Prisma-Abyss/">PRISMA ABYSSを開始する</a><a class="text-arrow" href="./">GAMESへ戻る →</a></div>
+      <p class="asset-note">掲載画像はPRISMA ABYSSの制作・ゲーム素材を使用しています。開発中のため、実際のゲーム画面・データ・仕様は更新される場合があります。</p>
     </article>
   </main>
   <footer class="site-footer"><div class="site-footer__inner"><p><strong>YU-ZORA GAME PORTAL</strong><br><small>GAME FILE 01</small></p><nav class="footer-policy-nav" aria-label="サイトポリシー"><a href="https://yu-zora.com/">YU-ZORAトップ</a><a href="https://yu-zora.com/privacy/">プライバシー</a><a href="https://yu-zora.com/terms/">利用規約</a><a href="https://yu-zora.com/disclaimer/">免責事項</a></nav><p>© 2026 YU-ZORA</p></div></footer>
