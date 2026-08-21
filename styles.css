@@ -620,3 +620,53 @@ h3 { font-size: clamp(21px, 2vw, 32px); }
 @media print {
   .games-subnav { display: none !important; }
 }
+
+
+/* Shared-shell micro tuning: tighter GAMES handoff and safer small-screen navigation. */
+.hero {
+  min-height: auto;
+  padding-top: clamp(42px, 4.2vw, 68px);
+  padding-bottom: clamp(54px, 5.2vw, 82px);
+}
+
+@media (max-width: 850px) {
+  .site-header__inner {
+    align-items: center;
+  }
+  .brand {
+    align-self: flex-start;
+    padding-top: 6px;
+  }
+  .global-nav {
+    white-space: nowrap;
+  }
+  .games-subnav__inner {
+    scroll-padding-inline: var(--mobile-inset);
+  }
+  .hero {
+    padding-top: 34px;
+    padding-bottom: 52px;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header__inner {
+    padding-left: var(--mobile-inset);
+    padding-right: var(--mobile-inset);
+  }
+  .brand {
+    padding-top: 5px;
+  }
+  .games-subnav__inner {
+    padding-left: var(--mobile-inset);
+    padding-right: var(--mobile-inset);
+    gap: 18px;
+  }
+  .games-subnav a {
+    padding-top: 1px;
+  }
+  .hero {
+    padding-top: 28px;
+    padding-bottom: 44px;
+  }
+}
