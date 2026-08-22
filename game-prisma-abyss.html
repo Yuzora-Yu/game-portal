@@ -76,7 +76,7 @@
       </nav>
 
       <section class="prisma-story prisma-story-v2" id="story" aria-labelledby="prisma-story-title">
-        <div class="prisma-story__copy">
+        <div class="prisma-story__copy" data-scroll-start>
           <p class="eyebrow">STORY / WORLD</p>
           <h1 id="prisma-story-title">六つの光が支えていた世界。<br>その均衡は、崩れ始めた。</h1>
           <p class="lead-copy">火、水、風、雷、光、闇。六つのプリズムによって形作られた世界を巡る、剣と魔法の冒険。</p>
@@ -90,7 +90,7 @@
       </section>
 
       <section class="prisma-cast" id="characters" aria-labelledby="characters-title">
-        <div class="prisma-cast__heading">
+        <div class="prisma-cast__heading" data-scroll-start>
           <p class="eyebrow">CHARACTERS / COMPANIONS</p>
           <h2 id="characters-title">誰と旅をしたいか。<br>強さだけでは、決まらない。</h2>
           <p>剣士、魔法使い、聖職者、騎士――。ここに並ぶのは、旅の中で出会う顔ぶれのほんの一部です。仲間を選ぶと、それぞれの立ち絵とプロフィールを確認できます。</p>
@@ -118,32 +118,25 @@
         </div>
       </section>
 
-      <section class="prisma-adventure" id="adventure" aria-labelledby="adventure-title">
-        <div class="prisma-adventure__intro">
-          <p class="eyebrow">EXPLORATION / BATTLE</p>
-          <h2 id="adventure-title">次の景色を、<br>自分の足で見に行こう。</h2>
-          <p>町を離れ、フィールドを越え、ダンジョンの奥へ。土地が変われば、出会う敵も、手に入るものも変わります。</p>
-          <p>戦闘は分かりやすいコマンドバトル。難しい操作ではなく、属性・スキル・装備・編成を考えて強くなる手応えを楽しめます。</p>
-          <ul class="prisma-battle-specs" aria-label="バトル機能">
-            <li><strong>4</strong>人パーティ</li>
-            <li><strong>AUTO</strong>周回対応</li>
-            <li><strong>SPEED</strong>速度変更</li>
-          </ul>
+      <section class="prisma-mobile-showcase" id="adventure" aria-labelledby="adventure-title">
+        <div class="prisma-mobile-showcase__heading" data-scroll-start>
+          <p class="eyebrow">ADVENTURE / IN-GAME</p>
+          <h2 id="adventure-title">歩く。戦う。拾う。<br>その全部が、冒険になる。</h2>
+          <div class="prisma-mobile-showcase__copy">
+            <p>町を離れ、フィールドを越え、ダンジョンの奥へ。土地が変われば、出会う敵も、手に入るものも変わります。戦闘は、属性・スキル・装備・編成を考えて進むコマンドバトルです。</p>
+            <ul class="prisma-battle-specs" aria-label="バトル機能">
+              <li><strong>4</strong>人パーティ</li>
+              <li><strong>AUTO</strong>周回対応</li>
+              <li><strong>SPEED</strong>速度変更</li>
+            </ul>
+          </div>
+          <p class="prisma-mobile-showcase__note">※掲載画面は開発中のものです。</p>
         </div>
-        <div class="prisma-adventure__gallery">
-          <figure class="prisma-adventure__main"><img src="./assets/prisma-showcase/battle-first-field.webp" alt="草原で魔物と対峙する4人パーティ" width="960" height="540" loading="lazy"><figcaption><span>01</span>FIELD / はじまりの草原</figcaption></figure>
+        <div class="prisma-adventure-strip" aria-label="冒険で訪れる場所">
+          <figure><img src="./assets/prisma-showcase/battle-first-field.webp" alt="草原で魔物と対峙する4人パーティ" width="960" height="540" loading="lazy"><figcaption><span>01</span>FIELD / はじまりの草原</figcaption></figure>
           <figure><img src="./assets/prisma-showcase/battle-fire.webp" alt="溶岩が流れる火山ダンジョン" width="1100" height="620" loading="lazy"><figcaption><span>02</span>FIRE / 灼熱の深部</figcaption></figure>
           <figure><img src="./assets/prisma-showcase/battle-seabed.webp" alt="青い光に包まれた海底神殿" width="960" height="540" loading="lazy"><figcaption><span>03</span>WATER / 海底神殿</figcaption></figure>
-          <figure class="prisma-adventure__main"><img src="./assets/prisma-showcase/battle-abyss.webp" alt="紫色の光に包まれた深淵の戦場" width="960" height="540" loading="lazy"><figcaption><span>04</span>ABYSS / さらに深い場所へ</figcaption></figure>
-        </div>
-      </section>
-
-      <section class="prisma-mobile-showcase" aria-labelledby="mobile-showcase-title">
-        <div class="prisma-mobile-showcase__heading">
-          <p class="eyebrow">IN-GAME / MOBILE</p>
-          <h2 id="mobile-showcase-title">この冒険を、<br>手のひらの中でも。</h2>
-          <p>フィールド探索も、コマンドバトルも、装備の見極めも。PCだけでなく、スマートフォンの画面とタッチ操作に合わせたインターフェースを開発しています。</p>
-          <p class="prisma-mobile-showcase__note">※掲載画面は開発中のものです。</p>
+          <figure><img src="./assets/prisma-showcase/battle-abyss.webp" alt="紫色の光に包まれた深淵の戦場" width="960" height="540" loading="lazy"><figcaption><span>04</span>ABYSS / さらに深い場所へ</figcaption></figure>
         </div>
         <div class="prisma-mobile-showcase__gallery" aria-label="スマートフォン版開発画面">
           <figure><div><img src="./assets/prisma-mobile/world-map.jpg" alt="スマートフォン版の世界地図とタッチ操作パネル" width="659" height="1280" loading="lazy"></div><figcaption><span>01</span><strong>FIELD</strong>世界を自分の足で歩く</figcaption></figure>
@@ -175,7 +168,7 @@
           <img src="./assets/prisma-showcase/equipment-archive.webp" alt="ゲームに登場する301種の装備アイコン一覧" width="1280" height="1024" loading="lazy">
           <p>剣、斧、短剣、杖、槍、弓、盾、防具、装飾品――冒険の先で、装備の選択肢は広がり続ける。</p>
         </div>
-        <div class="prisma-loot__copy">
+        <div class="prisma-loot__copy" data-scroll-start>
           <p class="eyebrow">LOOT / RANDOM EQUIPMENT</p>
           <h2 id="loot-title">同じ剣でも、<br>同じ一振りとは限らない。</h2>
           <p class="lead-copy">冒険で手に入る装備には、さまざまな能力が付与されます。敵を倒すたび、宝箱を開けるたび、「次はもっといいものが出るかもしれない」。</p>
@@ -189,7 +182,7 @@
       </section>
 
       <section class="prisma-bestiary prisma-bestiary-v2" id="monsters" aria-labelledby="prisma-bestiary-title">
-        <div class="prisma-bestiary-v2__heading">
+        <div class="prisma-bestiary-v2__heading" data-scroll-start>
           <p class="eyebrow">MONSTERS / BESTIARY</p>
           <p class="prisma-bestiary-v2__count"><strong>346</strong><span>MONSTERS</span></p>
           <h2 id="prisma-bestiary-title">かわいい。かっこいい。<br>……なんだ、こいつ？</h2>
@@ -199,16 +192,16 @@
         <div class="prisma-bestiary__grid">
           <figure><div><img src="./assets/prisma-showcase/monster-000001.webp" alt="ジェリー" width="768" height="737" loading="lazy"></div><figcaption><strong>ジェリー</strong><span>粘体 / RANK 1</span></figcaption></figure>
           <figure><div><img src="./assets/prisma-showcase/monster-000203.webp" alt="呪いの霊魂" width="525" height="432" loading="lazy"></div><figcaption><strong>呪いの霊魂</strong><span>死霊 / RANK 21</span></figcaption></figure>
+          <figure><div><img src="./assets/prisma-showcase/monster-000302.webp" alt="フレイムヴァイン" width="768" height="763" loading="lazy"></div><figcaption><strong>フレイムヴァイン</strong><span>植物 / RANK 31</span></figcaption></figure>
           <figure><div><img src="./assets/prisma-showcase/monster-000503.webp" alt="リトルメイジ" width="599" height="606" loading="lazy"></div><figcaption><strong>リトルメイジ</strong><span>魔族 / RANK 51</span></figcaption></figure>
           <figure><div><img src="./assets/prisma-showcase/monster-000504.webp" alt="キラーナイト" width="683" height="768" loading="lazy"></div><figcaption><strong>キラーナイト</strong><span>無生物 / RANK 52</span></figcaption></figure>
           <figure><div><img src="./assets/prisma-showcase/monster-200202.webp" alt="ロンリーメタル" width="560" height="387" loading="lazy"></div><figcaption><strong>ロンリーメタル</strong><span>粘体 / RANK 60</span></figcaption></figure>
-          <figure><div><img src="./assets/prisma-showcase/monster-000753.webp" alt="ダークバトラー強" width="498" height="768" loading="lazy"></div><figcaption><strong>ダークバトラー強</strong><span>魔族 / RANK 76</span></figcaption></figure>
         </div>
         <div class="prisma-book-line"><span>MONSTER BOOK</span><p>出会った魔物の数だけ、旅の記録が増えていく。</p></div>
       </section>
 
       <section class="prisma-depth prisma-depth-v2" id="abyss" aria-labelledby="prisma-depth-title">
-        <div class="prisma-depth__intro">
+        <div class="prisma-depth__intro" data-scroll-start>
           <p class="eyebrow">BEYOND THE STORY</p>
           <h2 id="prisma-depth-title">物語には終わりがある。<br>育成には、その先がある。</h2>
           <p>本編で出会った仲間、掘り当てた装備、考え抜いたビルド。そのすべてを持ち込んで、自分の限界へ挑む場所があります。</p>
@@ -262,5 +255,6 @@
   </main>
   <footer class="site-footer"><div class="site-footer__inner"><p><strong>YU-ZORA GAME PORTAL</strong><br><small>GAME FILE 01</small></p><nav class="footer-policy-nav" aria-label="サイトポリシー"><a href="https://yu-zora.com/">YU-ZORAトップ</a><a href="https://yu-zora.com/privacy/">プライバシー</a><a href="https://yu-zora.com/terms/">利用規約</a><a href="https://yu-zora.com/disclaimer/">免責事項</a></nav><p>© 2026 YU-ZORA</p></div></footer>
   <script src="./scripts/prisma-characters.js" defer></script>
+  <script src="./scripts/prisma-page-nav.js" defer></script>
 </body>
 </html>
