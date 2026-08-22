@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="王道ファンタジーの物語、多彩な仲間、4人パーティ、ランダム装備、鍛冶、346体の魔物、深淵探索。ブラウザRPG『PRISMA ABYSS』公式紹介ページ。">
+  <meta name="description" content="王道ファンタジーの物語、多彩な仲間、4人パーティ、ランダム装備、鍛冶、300体以上の魔物、深淵探索。ブラウザRPG『PRISMA ABYSS』公式紹介ページ。">
   <meta name="theme-color" content="#18171b">
   <link rel="canonical" href="https://yu-zora.com/games/game-prisma-abyss.html">
   <meta property="og:type" content="website">
@@ -70,7 +70,7 @@
         <a href="#story"><span>01</span>STORY</a>
         <a href="#characters"><span>02</span>CHARACTERS</a>
         <a href="#adventure"><span>03</span>ADVENTURE</a>
-        <a href="#loot"><span>04</span>LOOT</a>
+        <a href="#hack-slash"><span>04</span>HACK &amp; SLASH</a>
         <a href="#monsters"><span>05</span>MONSTERS</a>
         <a href="#abyss"><span>06</span>ABYSS</a>
       </nav>
@@ -78,7 +78,7 @@
       <section class="prisma-story prisma-story-v2" id="story" aria-labelledby="prisma-story-title">
         <div class="prisma-story__copy" data-scroll-start>
           <p class="eyebrow">STORY / WORLD</p>
-          <h1 id="prisma-story-title">六つの光が支えていた世界。<br>その均衡は、崩れ始めた。</h1>
+          <h1 class="prisma-heading-lines" id="prisma-story-title"><span>六つの光が<wbr>支えていた世界。</span><span>その均衡は、<wbr>崩れ始めた。</span></h1>
           <p class="lead-copy">火、水、風、雷、光、闇。六つのプリズムによって形作られた世界を巡る、剣と魔法の冒険。</p>
           <p>失われたもの。すれ違った想い。そして、プリズム崩壊の先に待つものとは――。分かりやすい王道ファンタジーを入口に、旅を続けるほど「PRISMA」と「ABYSS」の意味が立ち上がっていきます。</p>
           <p class="prisma-pullquote">王道RPGの冒険に、終わらない育成を。</p>
@@ -121,7 +121,7 @@
       <section class="prisma-mobile-showcase" id="adventure" aria-labelledby="adventure-title">
         <div class="prisma-mobile-showcase__heading" data-scroll-start>
           <p class="eyebrow">ADVENTURE / IN-GAME</p>
-          <h2 id="adventure-title">歩く。戦う。拾う。<br>その全部が、冒険になる。</h2>
+          <h2 class="prisma-heading-lines" id="adventure-title"><span>歩く。<wbr>戦う。<wbr>拾う。</span><span>その全部が、<wbr>冒険になる。</span></h2>
           <div class="prisma-mobile-showcase__copy">
             <p>町を離れ、フィールドを越え、ダンジョンの奥へ。土地が変われば、出会う敵も、手に入るものも変わります。戦闘は、属性・スキル・装備・編成を考えて進むコマンドバトルです。</p>
             <ul class="prisma-battle-specs" aria-label="バトル機能">
@@ -150,33 +150,35 @@
         </div>
       </section>
 
-      <section class="prisma-loop prisma-loop-v2" aria-labelledby="prisma-loop-title">
-        <div class="section-heading prisma-section-heading"><p>GAME LOOP</p><h2 id="prisma-loop-title">異なる「もう少し」が、ひとつの冒険につながっていく。</h2></div>
+      <section class="prisma-hack-slash" id="hack-slash" aria-labelledby="hack-slash-title">
+        <div class="prisma-hack-slash__heading" data-scroll-start>
+          <p class="eyebrow">HACK &amp; SLASH / GROWTH LOOP</p>
+          <h2 class="prisma-heading-lines" id="hack-slash-title"><span>戦う。<wbr>拾う。<wbr>組み直す。</span><span>次の一戦が、<wbr>また変わる。</span></h2>
+          <p>敵を倒して装備を拾い、能力を見極め、仲間との組み合わせを考える。手に入れた力で今まで届かなかった場所へ進み、さらに強い戦利品を探す――その循環が、冒険を先へ運びます。</p>
+        </div>
         <ol class="prisma-loop-v2__track">
-          <li><span>01</span><strong>探索する</strong><small>EXPLORE</small></li>
-          <li><span>02</span><strong>戦う</strong><small>BATTLE</small></li>
-          <li><span>03</span><strong>拾う</strong><small>LOOT</small></li>
-          <li><span>04</span><strong>育てる</strong><small>BUILD</small></li>
+          <li><span>01</span><strong>戦う</strong><small>BATTLE</small></li>
+          <li><span>02</span><strong>拾う</strong><small>LOOT</small></li>
+          <li><span>03</span><strong>見極める</strong><small>INSPECT</small></li>
+          <li><span>04</span><strong>組み直す</strong><small>REBUILD</small></li>
           <li><span>05</span><strong>もっと先へ</strong><small>GO DEEPER</small></li>
         </ol>
-        <p class="prisma-loop-v2__copy">新しい場所には、新しい敵がいる。強い敵からは、新しい戦利品が手に入る。手に入れた力で、今まで届かなかった場所へ。冒険を続けるほど、できることが増えていきます。</p>
-      </section>
-
-      <section class="prisma-loot" id="loot" aria-labelledby="loot-title">
-        <div class="prisma-loot__archive">
-          <div class="prisma-loot__archive-head"><span>EQUIPMENT ARCHIVE</span><strong>301</strong><small>MASTER DATA</small></div>
-          <img src="./assets/prisma-showcase/equipment-archive.webp" alt="ゲームに登場する301種の装備アイコン一覧" width="1280" height="1024" loading="lazy">
-          <p>剣、斧、短剣、杖、槍、弓、盾、防具、装飾品――冒険の先で、装備の選択肢は広がり続ける。</p>
-        </div>
-        <div class="prisma-loot__copy" data-scroll-start>
-          <p class="eyebrow">LOOT / RANDOM EQUIPMENT</p>
-          <h2 id="loot-title">同じ剣でも、<br>同じ一振りとは限らない。</h2>
-          <p class="lead-copy">冒険で手に入る装備には、さまざまな能力が付与されます。敵を倒すたび、宝箱を開けるたび、「次はもっといいものが出るかもしれない」。</p>
-          <p>攻撃力を見るか。特性との相性を選ぶか。今のパーティにぴったりの一品を探すか。拾った装備から、新しいビルドが始まることもあります。</p>
-          <div class="prisma-loot__systems">
-            <article><span>01</span><h3>RANDOM OPTIONS</h3><p>同名装備にも異なる付与能力。手に取るたび、見極める楽しさが生まれます。</p></article>
-            <article><span>02</span><h3>SYNERGY</h3><p>仲間、装備、特性の組み合わせが噛み合えば、戦い方そのものが変わります。</p></article>
-            <article><span>03</span><h3>BLACKSMITH</h3><p>合成、強化、精錬。気に入った一品を、自分の戦力として完成させていきます。</p></article>
+        <div class="prisma-loot" aria-labelledby="loot-title">
+          <div class="prisma-loot__archive">
+            <div class="prisma-loot__archive-head"><span>EQUIPMENT ARCHIVE</span><strong>301</strong><small>MASTER DATA</small></div>
+            <img src="./assets/prisma-showcase/equipment-archive.webp" alt="ゲームに登場する301種の装備アイコン一覧" width="1280" height="1024" loading="lazy">
+            <p>剣、斧、短剣、杖、槍、弓、盾、防具、装飾品――冒険の先で、装備の選択肢は広がり続ける。</p>
+          </div>
+          <div class="prisma-loot__copy">
+            <p class="eyebrow">LOOT / RANDOM EQUIPMENT</p>
+            <h2 class="prisma-heading-lines" id="loot-title"><span>同じ剣でも、</span><span>同じ一振りとは<wbr>限らない。</span></h2>
+            <p class="lead-copy">冒険で手に入る装備には、さまざまな能力が付与されます。敵を倒すたび、宝箱を開けるたび、「次はもっといいものが出るかもしれない」。</p>
+            <p>攻撃力を見るか。特性との相性を選ぶか。今のパーティにぴったりの一品を探すか。拾った装備から、新しいビルドが始まることもあります。</p>
+            <div class="prisma-loot__systems">
+              <article><span>01</span><h3>RANDOM OPTIONS</h3><p>同名装備にも異なる付与能力。手に取るたび、見極める楽しさが生まれます。</p></article>
+              <article><span>02</span><h3>SYNERGY</h3><p>仲間、装備、特性の組み合わせが噛み合えば、戦い方そのものが変わります。</p></article>
+              <article><span>03</span><h3>BLACKSMITH</h3><p>合成、強化、精錬。気に入った一品を、自分の戦力として完成させていきます。</p></article>
+            </div>
           </div>
         </div>
       </section>
@@ -184,9 +186,8 @@
       <section class="prisma-bestiary prisma-bestiary-v2" id="monsters" aria-labelledby="prisma-bestiary-title">
         <div class="prisma-bestiary-v2__heading" data-scroll-start>
           <p class="eyebrow">MONSTERS / BESTIARY</p>
-          <p class="prisma-bestiary-v2__count"><strong>346</strong><span>MONSTERS</span></p>
-          <h2 id="prisma-bestiary-title">かわいい。かっこいい。<br>……なんだ、こいつ？</h2>
-          <p>姿も能力もさまざまな魔物が346体登場。新しい土地へ向かい、まだ見ぬ敵と出会うたび、魔物図鑑が少しずつ旅の記録になっていきます。</p>
+          <h2 class="prisma-heading-lines" id="prisma-bestiary-title"><span>かわいい。<wbr>かっこいい。</span><span>……なんだ、<wbr>こいつ？</span></h2>
+          <p>姿も能力もさまざまな魔物が300体以上登場。新しい土地へ向かい、まだ見ぬ敵と出会うたび、魔物図鑑が少しずつ旅の記録になっていきます。</p>
           <p>強さを求めるだけが冒険じゃない。きっと、あなたのお気に入りも見つかるはず。</p>
         </div>
         <div class="prisma-bestiary__grid">
