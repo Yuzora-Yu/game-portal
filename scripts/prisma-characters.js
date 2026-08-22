@@ -1,7 +1,7 @@
 (() => {
   const characters = [
     { id: 301, no: 21, name: "アルス", job: "勇者", profile: "故郷を深淵の災厄で失った寡黙な剣士。復讐から始まった旅の中で、誰かを守るために剣を振るう道を選んでいく。", x: 2, y: 2 },
-    { id: 403, label: "STORY CHARACTER", name: "ルーナ", job: "祈り手", profile: "山奥の村でアルスと共に育った、明るく心優しい少女。光神の祠に花を供え、危機の中でも誰かを助けようと手を伸ばす。", art: "./assets/prisma-character-lineup/luna-403.webp", face: "./assets/prisma-character-lineup/luna-403-face.webp" },
+    { id: 403, label: "STORY CHARACTER", name: "ルーナ", job: "祈り手", profile: "山奥の村でアルスと共に育った、明るく心優しい少女。光神の祠に花を供え、危機の中でも誰かを助けようと手を伸ばす。", art: "./assets/game-pages/GAME01_prisma-abyss/prisma-character-lineup/luna-403.webp", face: "./assets/game-pages/GAME01_prisma-abyss/prisma-character-lineup/luna-403-face.webp" },
     { id: 302, no: 22, name: "フリーダ", job: "竜騎士", profile: "竜と共に空を駆けてきた歴戦の竜騎士。傷を負っても豪胆さを失わず、仲間を前へ送り出す姉御肌。", x: 3, y: 2 },
     { id: 303, no: 23, name: "リーシア", job: "星詠師", profile: "長い時を生き、古い記録と魔術に通じる伝説級の魔導師。見過ごした謎を放っておけず、自分の目で確かめるため旅に加わる。", x: 4, y: 2 },
     { id: 304, no: 24, name: "クロード", job: "聖拳士", profile: "人を守るため真っ先に前へ出る聖拳士。届かなかった拳への悔いを抱えながら、次こそは救うために立ち上がる。", x: 5, y: 2 },
@@ -38,7 +38,7 @@
 
   if (!selector || !art || !number || !job || !name || !profile) return;
 
-  const imagePath = (character) => character.art || `./assets/prisma-character-lineup/char-${character.id}.webp`;
+  const imagePath = (character) => character.art || `./assets/game-pages/GAME01_prisma-abyss/prisma-character-lineup/char-${character.id}.webp`;
 
   const centerSelectedFace = (button) => {
     if (!window.matchMedia("(max-width: 1280px)").matches) return;

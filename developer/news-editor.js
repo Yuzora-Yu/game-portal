@@ -107,7 +107,7 @@
   <meta name="description" content="${summary}">
   <meta name="theme-color" content="#201d17">
   <title>${title} | YU-ZORA GAME PORTAL</title>
-  <link rel="icon" href="../assets/prisma-abyss-icon.png">
+  <link rel="icon" href="../assets/game-pages/GAME01_prisma-abyss/prisma-abyss-icon.png">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>

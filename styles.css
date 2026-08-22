@@ -89,8 +89,8 @@ dd { margin: 0; font-size: .88rem; font-weight: 700; }
 .game-entry { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(19rem, .95fr); border: 2px solid var(--rule); background: var(--paper-light); box-shadow: var(--shadow); }
 .game-entry__visual { position: relative; min-height: 28rem; display: grid; place-items: center; padding: 2rem; overflow: hidden; background: var(--ink); text-decoration: none; isolation: isolate; }
 .game-entry__visual::after { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .38; background-position: center; background-size: cover; filter: grayscale(.25) contrast(1.15); }
-.game-entry__visual--prisma::after { background-image: url("./assets/prisma-abyss-keyart.webp"); }
-.game-entry__visual--kanji::after { opacity: .5; background-image: linear-gradient(rgba(9,12,18,.08), rgba(9,12,18,.48)), url("./assets/kanji-crash-start.webp"); background-position: center; filter: saturate(.8) contrast(1.08); }
+.game-entry__visual--prisma::after { background-image: url("./assets/game-pages/GAME01_prisma-abyss/prisma-abyss-keyart.webp"); }
+.game-entry__visual--kanji::after { opacity: .5; background-image: linear-gradient(rgba(9,12,18,.08), rgba(9,12,18,.48)), url("./assets/game-pages/GAME02_kanji-crash-keyboard/kanji-crash-start.webp"); background-position: center; filter: saturate(.8) contrast(1.08); }
 .game-entry__visual:hover::after { transform: scale(1.025); }
 .game-entry__number { position: absolute; left: 1rem; top: .7rem; margin: 0; color: var(--paper-light); font-family: var(--font-display); font-size: .75rem; font-weight: 900; letter-spacing: .12em; }
 .game-entry__logo { width: min(90%, 34rem); filter: drop-shadow(0 6px 18px rgba(0,0,0,.65)); }
@@ -631,7 +631,7 @@ dd { margin: 0; font-size: .88rem; font-weight: 700; }
   border: 1px solid #615a53;
   border-radius: 0;
   background-color: #2d2a30;
-  background-image: url("./assets/prisma-character-lineup/character-faces.webp");
+  background-image: url("./assets/game-pages/GAME01_prisma-abyss/prisma-character-lineup/character-faces.webp");
   background-repeat: no-repeat;
   background-size: 900% 300%;
   background-position: calc(var(--face-x) * 12.5%) calc(var(--face-y) * 50%);
@@ -1612,4 +1612,191 @@ h3 { font-size: clamp(21px, 2vw, 32px); }
 
 @media (max-width: 560px) {
   .prisma-mobile-showcase__gallery { grid-template-columns: repeat(8, minmax(15rem, 78vw)); }
+}
+
+/* GAME02 — Kanji Crash Keyboard feature page v2 */
+.kanji-page-v2 {
+  --kanji-night: #10151c;
+  --kanji-panel: #171e29;
+  --kanji-panel-soft: #202838;
+  --kanji-mint: #55e2b7;
+  --kanji-coral: #ee6677;
+  --kanji-copy: #d6dde8;
+  --kanji-muted: #9ca8ba;
+}
+
+.kanji-page-v2 section,
+.kanji-page-v2 [id] { scroll-margin-top: calc(var(--header-offset) + 5rem); }
+
+.kanji-page-v2 .game-detail-hero--kanji {
+  min-height: clamp(32rem, 62vw, 50rem);
+  border-color: #30394a;
+  background: var(--kanji-night);
+}
+
+.kanji-page-v2 .game-detail-hero--kanji .game-detail-hero__image {
+  filter: brightness(.58) saturate(.92) contrast(1.08);
+  transform: scale(1.01);
+}
+
+.kanji-page-v2 .game-detail-hero__overlay {
+  background:
+    linear-gradient(90deg, rgba(10,14,20,.94) 0%, rgba(10,14,20,.74) 44%, rgba(10,14,20,.16) 78%),
+    linear-gradient(0deg, rgba(10,14,20,.96) 0%, transparent 48%);
+}
+
+.kanji-page-v2 .file-index {
+  color: var(--kanji-mint);
+  border: 1px solid rgba(85,226,183,.5);
+  background: rgba(13,18,25,.84);
+}
+
+.kanji-page-v2 .game-detail-title-lockup {
+  max-width: 42rem;
+  padding: clamp(.9rem, 2vw, 1.35rem);
+  border: 1px solid rgba(255,255,255,.13);
+  border-left: 5px solid var(--kanji-mint);
+  background: rgba(18,24,34,.9);
+  box-shadow: 12px 12px 0 rgba(0,0,0,.3);
+  backdrop-filter: blur(10px);
+}
+
+.kanji-page-v2 .game-detail-title-lockup strong { font-size: clamp(1.7rem, 3.5vw, 3.2rem); }
+.kanji-page-v2 .game-detail-title-lockup span { color: var(--kanji-mint); }
+.kanji-page-v2 .detail-actions--top { margin-bottom: 1.5rem; }
+.kanji-page-v2 .button--primary { color: #07140f; background: var(--kanji-mint); border-color: #173d32; box-shadow: 5px 5px 0 #173d32; }
+.kanji-page-v2 .button--primary:hover { color: #07140f; background: #7ceac8; }
+
+.kanji-local-nav {
+  margin: 0 0 clamp(3rem, 7vw, 6rem);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  border: 1px solid #30394a;
+  background: var(--kanji-night);
+  box-shadow: 7px 7px 0 rgba(16,21,28,.18);
+}
+
+.kanji-local-nav a {
+  min-width: 0;
+  min-height: 58px;
+  padding: .75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  color: #f5f7fb;
+  border-right: 1px solid #30394a;
+  font-size: .78rem;
+  font-weight: 800;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.kanji-local-nav a:last-child { border-right: 0; }
+.kanji-local-nav span { color: var(--kanji-mint); font-family: var(--font-mono); font-size: .68rem; }
+.kanji-local-nav a:hover,
+.kanji-local-nav a:focus-visible { color: var(--kanji-night); background: var(--kanji-mint); }
+.kanji-local-nav a:hover span,
+.kanji-local-nav a:focus-visible span { color: #173d32; }
+
+.kanji-page-v2 .detail-grid {
+  max-width: none;
+  padding: clamp(1.5rem, 4vw, 4rem);
+  color: var(--kanji-copy);
+  border: 1px solid #30394a;
+  background:
+    radial-gradient(circle at 86% 12%, rgba(85,226,183,.12), transparent 28rem),
+    var(--kanji-night);
+  box-shadow: 10px 10px 0 rgba(16,21,28,.18);
+}
+
+.kanji-page-v2 .detail-grid h1 { color: #fff; letter-spacing: -.05em; }
+.kanji-page-v2 .detail-grid .eyebrow { color: var(--kanji-mint); }
+.kanji-page-v2 .detail-grid .lead-copy { color: #f5f7fb; }
+.kanji-page-v2 .spec-sheet { border-color: #435064; background: rgba(31,39,54,.88); box-shadow: 6px 6px 0 rgba(0,0,0,.26); }
+.kanji-page-v2 .spec-sheet .stamp { color: var(--kanji-mint); border-color: var(--kanji-mint); }
+.kanji-page-v2 .spec-sheet dl div { border-color: #435064; }
+.kanji-page-v2 .spec-sheet dt { color: var(--kanji-muted); }
+.kanji-page-v2 .spec-sheet dd { color: #fff; }
+
+.kanji-page-v2 .feature-grid--kanji { gap: clamp(.75rem, 2vw, 1.35rem); }
+.kanji-page-v2 .feature-grid--kanji .feature-card {
+  min-height: 15rem;
+  color: var(--kanji-copy);
+  border: 1px solid #354055;
+  background: var(--kanji-panel);
+  box-shadow: 6px 6px 0 rgba(16,21,28,.2);
+  transform: none;
+}
+.kanji-page-v2 .feature-card__number { color: var(--kanji-mint); }
+.kanji-page-v2 .feature-card h3 { color: #fff; border-color: #435064; }
+
+.kanji-page-v2 .mode-card {
+  min-height: 24rem;
+  color: var(--kanji-copy);
+  border: 1px solid #354055;
+  background: linear-gradient(145deg, var(--kanji-panel-soft), var(--kanji-night));
+  box-shadow: 8px 8px 0 rgba(16,21,28,.2);
+}
+.kanji-page-v2 .mode-card__index,
+.kanji-page-v2 .mode-card h3 strong { color: var(--kanji-mint); }
+.kanji-page-v2 .mode-card--danger { border-color: rgba(238,102,119,.52); }
+.kanji-page-v2 .mode-card--danger .mode-card__index,
+.kanji-page-v2 .mode-card--danger h3 strong { color: var(--kanji-coral); }
+.kanji-page-v2 .mode-card h3 { color: #fff; border-color: #435064; }
+.kanji-page-v2 .mode-card::after { color: rgba(85,226,183,.045); }
+.kanji-page-v2 .mode-card--danger::after { color: rgba(238,102,119,.045); }
+
+.kanji-page-v2 .image-report__heading,
+.kanji-page-v2 .section-heading { border-color: #6f7b8d; }
+.kanji-page-v2 .image-report__heading p,
+.kanji-page-v2 .section-heading > p,
+.kanji-page-v2 .eyebrow { color: #b74352; }
+.kanji-page-v2 .image-report__scene,
+.kanji-page-v2 .record-report__image { border-color: #354055; background: var(--kanji-night); box-shadow: 8px 8px 0 rgba(16,21,28,.2); }
+
+.kanji-page-v2 .mechanic-flow {
+  color: var(--kanji-copy);
+  border: 1px solid #354055;
+  background: var(--kanji-night);
+  box-shadow: 8px 8px 0 rgba(16,21,28,.2);
+}
+.kanji-page-v2 .mechanic-flow li { border-color: #354055; }
+.kanji-page-v2 .mechanic-flow li > span { color: var(--kanji-mint); }
+.kanji-page-v2 .mechanic-flow h3 { color: #fff; border-color: #435064; }
+.kanji-page-v2 .mechanic-flow p { color: var(--kanji-muted); }
+
+.kanji-page-v2 .record-report {
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  color: var(--kanji-copy);
+  border: 1px solid #30394a;
+  background: linear-gradient(120deg, var(--kanji-night), #181f2b);
+}
+.kanji-page-v2 .record-report h2 { color: #fff; }
+.kanji-page-v2 .record-report .eyebrow { color: var(--kanji-mint); }
+.kanji-page-v2 > .asset-note { padding-top: 1rem; border-top: 1px solid rgba(32,29,23,.2); }
+
+@media (max-width: 760px) {
+  .kanji-page-v2 .game-detail-hero--kanji { min-height: 31rem; }
+  .kanji-page-v2 .game-detail-hero__overlay {
+    background: linear-gradient(0deg, rgba(10,14,20,.98) 0%, rgba(10,14,20,.58) 62%, rgba(10,14,20,.15) 100%);
+  }
+  .kanji-local-nav {
+    margin-inline: var(--mobile-inset);
+    grid-template-columns: repeat(5, minmax(8.75rem, 1fr));
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+  .kanji-local-nav a { min-height: 52px; scroll-snap-align: start; }
+  .kanji-page-v2 .detail-grid,
+  .kanji-page-v2 .record-report { margin-inline: 0; border-left: 0; border-right: 0; box-shadow: none; }
+  .kanji-page-v2 .feature-grid--kanji .feature-card { transform: none; }
+}
+
+@media (max-width: 560px) {
+  .kanji-page-v2 .game-detail-title-lockup { align-items: flex-start; }
+  .kanji-page-v2 .game-detail-title-lockup strong { font-size: 1.35rem; }
+  .kanji-page-v2 .feature-grid--kanji,
+  .kanji-page-v2 .mode-comparison__grid { grid-template-columns: 1fr; }
+  .kanji-page-v2 .feature-grid--kanji .feature-card,
+  .kanji-page-v2 .mode-card { min-height: 0; }
 }

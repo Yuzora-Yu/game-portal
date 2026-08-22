@@ -4,6 +4,11 @@
   const list = document.querySelector("#news-list");
   if (!list) return;
 
+  // Production HTML is pre-rendered during build so crawlers can follow the
+  // article links without JavaScript. Keep that initial markup authoritative
+  // and only use this renderer as a local/source-file fallback.
+  if (list.querySelector("[data-news-id]")) return;
+
   const posts = Array.isArray(window.NEWS_POSTS) ? [...window.NEWS_POSTS] : [];
   posts.sort((a, b) => String(b.date).localeCompare(String(a.date)));
 
@@ -23,6 +28,7 @@
 
   visiblePosts.forEach((post) => {
     const item = document.createElement("li");
+    item.dataset.newsId = post.id;
     const link = document.createElement("a");
     const time = document.createElement("time");
     const title = document.createElement("span");

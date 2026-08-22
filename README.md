@@ -5,8 +5,10 @@
 ## 主なファイル
 
 - `index.html`: トップページ。ゲーム詳細、ニュース、開発者、各ポリシーへの導線
-- `game-prisma-abyss.html`: PRISMA ABYSS 詳細ページ
-- `game-kanji-crash-keyboard.html`: 漢字 de クラッシュキーボード 詳細ページ
+- `GAME01_prisma-abyss.html`: PRISMA ABYSS 詳細ページ
+- `GAME02_kanji-crash-keyboard.html`: 漢字 de クラッシュキーボード 詳細ページ
+- `config/game-pages.json`: 紹介ページ番号・URL・画像フォルダの正本台帳
+- `docs/handoff/`: ページ管理、画像管理、NEWS生成の引継ぎ資料
 - `news.html`: お知らせ一覧
 - `news/*.html`: お知らせ詳細ページ
 - `scripts/news-data.js`: トップと一覧に表示するお知らせデータの正本
@@ -39,7 +41,7 @@ python -m http.server 8000
 2. 公開日、カテゴリ、タイトル、記事ID、概要、本文を入力
 3. 「詳細HTMLをダウンロード」を押し、生成ファイルを `news/` へ配置
 4. 「更新済みデータをダウンロード」を押し、`scripts/news-data.js` を置換
-5. トップ、お知らせ一覧、詳細リンクを確認してコミット
+5. `npm test` を実行し、トップ最新3件・一覧全件・詳細リンクを確認してコミット
 
 エディタは静的なローカル生成ツールで、リポジトリへ直接投稿しません。認証機能もないため、公開環境に置く場合はアクセス制限を行うか、デプロイ対象から除外してください。
 
@@ -58,12 +60,12 @@ python -m http.server 8000
 
 ## 画像素材
 
-ゲーム詳細ページでは、ゲーム内素材をポータル用に複製・WebP化して使用しています。漢字 de クラッシュキーボードは、10語モードとCPU戦を追加した最新開発版の仕様・提供画面に合わせて紹介内容を更新しています。
+ゲーム詳細ページでは、ゲーム内素材をポータル用に複製・WebP化して使用しています。ページ固有画像は `assets/game-pages/GAME{NN}_{slug}/` へまとめ、`assets/` 直下へゲーム別画像を増やしません。
 
-- 横長背景: `assets/prisma-medal-hall.webp`
-- 漢字 de クラッシュキーボード: `assets/kanji-crash-start.webp`、`assets/kanji-crash-play.webp`、`assets/kanji-crash-cpu.webp`、`assets/kanji-crash-icon.svg`（配布ZIP内アイコンをそのまま使用）
-- キャラクター: ジョセフ、エリーゼ、リーシア
-- モンスター: かえんりゅう、アクアリリィ、ブリーズリザード
+- PRISMA ABYSS: `assets/game-pages/GAME01_prisma-abyss/`
+- 漢字 de クラッシュキーボード: `assets/game-pages/GAME02_kanji-crash-keyboard/`
+
+追加・改名・画像差し替えの手順は `docs/handoff/GAME_PAGE_MANAGEMENT.md` を参照してください。
 
 ## 公開
 

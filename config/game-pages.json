@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "page_filename_pattern": "GAME{NN}_{slug}.html",
+  "asset_directory_pattern": "assets/game-pages/GAME{NN}_{slug}",
+  "games": [
+    {
+      "number": "01",
+      "slug": "prisma-abyss",
+      "title": "PRISMA ABYSS",
+      "page_file": "GAME01_prisma-abyss.html",
+      "asset_dir": "assets/game-pages/GAME01_prisma-abyss",
+      "play_url": "/games/Prisma-Abyss/",
+      "device": "PC / SMARTPHONE",
+      "status": "IN DEVELOPMENT",
+      "legacy_page_files": [
+        "game-prisma-abyss.html"
+      ]
+    },
+    {
+      "number": "02",
+      "slug": "kanji-crash-keyboard",
+      "title": "漢字 de クラッシュキーボード",
+      "page_file": "GAME02_kanji-crash-keyboard.html",
+      "asset_dir": "assets/game-pages/GAME02_kanji-crash-keyboard",
+      "play_url": "/games/kanji-de-crash-keyboard/",
+      "device": "PC / PHYSICAL KEYBOARD",
+      "status": "IN DEVELOPMENT",
+      "legacy_page_files": [
+        "game-kanji-crash-keyboard.html"
+      ]
+    }
+  ]
+}
